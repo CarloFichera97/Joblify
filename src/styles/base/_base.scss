@@ -1,0 +1,25 @@
+//Partials are usually called with _at the beginning
+//Since we are working with rem this font size is gonna be in base 10
+//instead of base 16 (1rem=16px normally, in this case it is 1rem=10px)
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: $m-size;
+  background-color: white;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: default;
+}
+
+.is-active {
+  font-weight: bold;
+}
