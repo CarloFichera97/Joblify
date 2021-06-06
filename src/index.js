@@ -1,6 +1,7 @@
 require("file-loader?name=[name].[ext]!./index.html");
 import React from "react";
 import ReactDOM from "react-dom";
+import { Provider } from "react-redux";
 import "normalize.css/normalize.css";
 import "./styles/style.scss";
 import AppRouter from "./routes/AppRoutes";
@@ -12,6 +13,8 @@ import {
   setRole,
   sortBySalary,
   sortByDate,
+  searchByCompany,
+  searchByRole,
 } from "./actions/filters";
 
 import {
@@ -25,12 +28,13 @@ const store = configureStore();
 /* ------------------BASIC FUNCTIONALITY TESTS---------------------------------
 console.log(store.getState());
 
-console.log("-----------------ADDING JOB APPLICATION--------------");
+*/ console.log("-----------------ADDING JOB APPLICATION--------------");
 store.dispatch(
   addJobApplication({
-    company: "WWWWWWWWWWWWWWWWWWW",
-    role: "WWWWWWWWWWWWWWWWWWWWWWWWWWW",
-    salary: 2222222222222222222222,
+    company: "Company ONE",
+    role: "Electrical Engineer",
+    salary: 500000,
+    createdOn: -244,
   })
 );
 console.log(store.getState());
@@ -38,16 +42,31 @@ console.log(store.getState());
 console.log("-----------------ADDING JOB APPLICATION--------------");
 store.dispatch(
   addJobApplication({
-    company: "FFFFFFFFFFFFFFFF",
-    role: "FFFFFFFFFFFFFF",
-    salary: 1111111111111,
-    description: "XXXXXXXXXXXXXXXXXXX",
+    company: "Company TWO",
+    role: "Software Engineer",
+    salary: 700000,
+    description: "Description",
     notes: "XXXXXXXXXXXXXXXXXX",
     status: "XXXXXXXXXXXXXXXXXXXX",
-    createdOn: new Date().toDateString(),
+    createdOn: -500,
+  })
+);
+
+console.log("-----------------ADDING JOB APPLICATION--------------");
+store.dispatch(
+  addJobApplication({
+    company: "Company THREE",
+    role: "Industrial Engineer",
+    salary: 900000,
+    description: "Description",
+    notes: "XXXXXXXXXXXXXXXXXX",
+    status: "XXXXXXXXXXXXXXXXXXXX",
+    createdOn: -500,
   })
 );
 console.log(store.getState());
+
+/*
 console.log("-----------------EDITING FIRST JOB APPLICATION--------------");
 console.log(store.getState().jobApplications[0]);
 const idNeeded2 = String(store.getState().jobApplications[0].id);
@@ -77,7 +96,25 @@ console.log("-----------------SORT BY SALARY--------------");
 store.dispatch(sortBySalary());
 console.log(store.getState().filters.sortBy);
 console.log("-----------------SORT BY DATE--------------");
-store.dispatch(sortByDate());
-console.log(store.getState().filters.sortBy); */
 
-ReactDOM.render(<AppRouter />, document.getElementById("app"));
+console.log(store.getState().filters.sortBy); */
+store.dispatch(sortByDate());
+
+console.log("-----------------SEARCH BY COMPANY--------------");
+store.dispatch(searchByCompany());
+console.log(store.getState().filters.searchBy);
+
+console.log("-----------------SEARCH BY ROLE--------------");
+//store.dispatch(searchByRole());
+console.log(store.getState().filters.searchBy);
+console.log(store.getState());
+
+const jsx = (
+  <div>
+    <Provider store={store}>
+      <AppRouter />
+    </Provider>
+  </div>
+);
+
+ReactDOM.render(jsx, document.getElementById("app"));

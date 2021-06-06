@@ -52,5 +52,6 @@ const demo = {
     companyName: "xxxx",
     role: "xxxxxx",
     sortBy: "xxxxxx", //sorted by salary or date
+    searchBy: "xxxx", ///Role or Company
   },
 };
