@@ -1,14 +1,17 @@
-import { connect } from "react-redux";
+import moment from "moment";
 const getFilteredJobApplications = (
   jobApplications,
-  { company, role, sortBy, startDate, endDate,searchBy }
+  { company, role, sortBy, startDate, endDate, searchBy }
 ) => {
   return jobApplications
     .filter((jobApplication) => {
-      const startDateMatch =
-        typeof startDate !== "number" || jobApplication.createdOn >= startDate;
-      const endDateMatch =
-        typeof endDate !== "number" || jobApplication.createdOn <= endDate;
+      const createdAtMoment = moment(jobApplication.createdOn);
+      const startDateMatch = startDate
+        ? startDate.isSameOrBefore(createdAtMoment, "day")
+        : true;
+      const endDateMatch = endDate
+        ? endDate.isSameOrAfter(createdAtMoment, "day")
+        : true;
       const companyTextMatch = jobApplication.company
         .toLowerCase()
         .includes(company.toLowerCase());
@@ -30,7 +33,7 @@ const getFilteredJobApplications = (
     });
 };
 
-export default getFilteredJobApplications
+export default getFilteredJobApplications;
 
 /*
 const demo = {
