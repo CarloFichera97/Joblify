@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "serve": "webpack serve --mode development"
+    "serve": "webpack serve --mode development",
+    "test": "jest --watchAll"
   },
   "author": "",
   "license": "ISC",
@@ -12,6 +13,7 @@
     "babel-plugin-transform-class-properties": "^6.24.1",
     "dates": "^1.1.0",
     "from": "^0.1.7",
+    "jest": "^27.0.4",
     "modal": "^1.2.0",
     "moment": "^2.29.1",
     "normalize.css": "^7.0.0",

@@ -8,7 +8,6 @@ const jobApplicationsReducer = (
     case "ADD_JOB_APPLICATION":
       return [...state, action.jobApplication];
     case "REMOVE_JOB_APPLICATION":
-      console.log(state);
       return state.filter((arrayElementn) => {
         return arrayElementn.id !== action.id;
       });
