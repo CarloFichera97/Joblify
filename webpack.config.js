@@ -1,30 +1,53 @@
 const path = require("path");
-module.exports = {
-  entry: "./src/index.js",
-  output: {
-    path: path.join(__dirname, "src"),
-    filename: "index.bundle.js",
-  },
-  devServer: {
-    port: 3010,
-    watchContentBase: true,
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
-    historyApiFallback: true,
-  },
-  devtool: "eval-cheap-module-source-map",
-  module: {
-    rules: [
-      {
-        test: /\.(js|jsx)$/,
-        exclude: /node_modules/,
-        use: {
-          loader: "babel-loader",
-        },
-      },
-      {
-        test: /\.(css|scss)$/,
-        use: ["style-loader", "css-loader", "sass-loader"],
-      },
+module.exports = (env) => {
+  return {
+    entry: "./server/server.js",
+    output: {
+      path: path.join(__dirname, "public"),
+      filename: "index.bundle.js",
+    },
+    plugins: [
+      new MiniCssExtractPlugin({
+        filename: "styles.css",
+      }),
     ],
-  },
+    devServer: {
+      port: 3010,
+      watchContentBase: true,
+
+      historyApiFallback: true,
+    },
+    devtool: "inline-cheap-module-source-map", //"source-map",
+    module: {
+      rules: [
+        {
+          test: /\.(js|jsx)$/,
+          exclude: /node_modules/,
+          use: {
+            loader: "babel-loader",
+          },
+        },
+        {
+          test: /\.(css|scss)$/,
+          use: [
+            MiniCssExtractPlugin.loader,
+            {
+              loader: "css-loader",
+              options: {
+                sourceMap: true,
+              },
+            },
+            {
+              loader: "sass-loader",
+              options: {
+                sourceMap: true,
+              },
+            },
+          ],
+        },
+      ],
+    },
+  };
 };
