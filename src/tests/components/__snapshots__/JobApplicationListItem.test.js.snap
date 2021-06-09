@@ -1,0 +1,88 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should render Job Application List correctly with inputs 1`] = `
+<div>
+  <div
+    key="1"
+  >
+    <Link
+      replace={false}
+      to="/edit/1"
+    >
+      <h3>
+        Company: 
+        COMPANY ONE
+         Role: 
+        JOB ONE
+      </h3>
+    </Link>
+    <p>
+      Salary: 
+      1000
+      $ 
+    </p>
+  </div>
+  <div
+    key="2"
+  >
+    <Link
+      replace={false}
+      to="/edit/2"
+    >
+      <h3>
+        Company: 
+        COMPANY TWO
+         Role: 
+        JOB TWO
+      </h3>
+    </Link>
+    <p>
+      Salary: 
+      2000
+      $ 
+    </p>
+  </div>
+  <div
+    key="3"
+  >
+    <Link
+      replace={false}
+      to="/edit/3"
+    >
+      <h3>
+        Company: 
+        COMPANY THREE
+         Role: 
+        JOB THREE
+      </h3>
+    </Link>
+    <p>
+      Salary: 
+      500
+      $ 
+    </p>
+  </div>
+  <div
+    key="4"
+  >
+    <Link
+      replace={false}
+      to="/edit/4"
+    >
+      <h3>
+        Company: 
+        COMPANY FOUR
+         Role: 
+        JOB FOUR
+      </h3>
+    </Link>
+    <p>
+      Salary: 
+      200
+      $ 
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Should render Job Application List correctly with no inputs 1`] = `<div />`;

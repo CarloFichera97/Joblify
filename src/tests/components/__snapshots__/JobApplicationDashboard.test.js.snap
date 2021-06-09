@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should render Job Application Dashboard correctly 1`] = `
+<div>
+   
+  <Connect(FilterSelector) />
+  <Connect(JobApplicationList) />
+   
+</div>
+`;

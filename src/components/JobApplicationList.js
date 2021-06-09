@@ -1,10 +1,9 @@
 import React from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
-import { removeJobApplication } from "./../actions/jobApplications";
 import getFilteredJobApplications from "./../selectors/jobApplications";
 
-const JobApplicationList = (props) => {
+export const JobApplicationList = (props) => {
   return (
     <div>
       {props.jobApplications.map((jobApplication) => (
