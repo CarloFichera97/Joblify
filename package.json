@@ -2,7 +2,7 @@
   "name": "jon-application-track",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "index.js",
   "scripts": {
     "serve:dev": "webpack  --mode development",
     "serve:prod": "webpack  --mode production",
