@@ -6,7 +6,8 @@ exports[`Should render Header correctly 1`] = `
     Job Tracker
   </h1>
   <NavLink
-    activeClassName="is-active"
+    activeClassName="
+ is-active"
     aria-current="page"
     exact={true}
     to="/"

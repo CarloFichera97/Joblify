@@ -3,7 +3,12 @@ import { NavLink } from "react-router-dom";
 const Header = () => (
   <header>
     <h1>Job Tracker</h1>
-    <NavLink to="/" activeClassName="is-active" exact={true}>
+    <NavLink
+      to="/"
+      activeClassName="
+    is-active"
+      exact={true}
+    >
       Dashboard
     </NavLink>
     <NavLink to="/create" activeClassName="is-active">
@@ -13,7 +18,6 @@ const Header = () => (
       Help Page
     </NavLink>
   </header>
-
 );
 
-export default Header
+export default Header;

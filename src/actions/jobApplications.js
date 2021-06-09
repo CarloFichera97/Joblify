@@ -55,3 +55,11 @@ const demo = {
     searchBy: "xxxx", ///Role or Company
   },
 };
+
+///TO ADD TO THE DEMO
+/*const recruiterContacts = {
+  fullName,
+  email,
+  phoneNumber,
+  lastSpokenOn,
+};*/
