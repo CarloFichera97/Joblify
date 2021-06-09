@@ -39,8 +39,8 @@ class FilterSelector extends React.Component {
           }
           onChange={(e) => {
             if (this.props.filters.searchBy === "company") {
-              props.dispatch(setCompanyName(e.target.value));
-            } else if (props.filters.searchBy === "role") {
+              this.props.dispatch(setCompanyName(e.target.value));
+            } else if (this.props.filters.searchBy === "role") {
               this.props.dispatch(setRoleName(e.target.value));
             }
           }}
