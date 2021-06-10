@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should handle onClick  1`] = `
+<button
+  onClick={
+    [MockFunction] {
+      "calls": Array [
+        Array [
+          1,
+        ],
+      ],
+      "results": Array [
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+      ],
+    }
+  }
+/>
+`;
+
+exports[`Should handle onSubmit  1`] = `
+<div>
+  <JobForm
+    onSubmit={[Function]}
+  />
+  <button
+    onClick={[Function]}
+  >
+    Remove
+  </button>
+</div>
+`;
+
+exports[`Should render EditJobApplication Correctly 1`] = `
+<div>
+  <JobForm
+    onSubmit={[Function]}
+  />
+  <button
+    onClick={[Function]}
+  >
+    Remove
+  </button>
+</div>
+`;

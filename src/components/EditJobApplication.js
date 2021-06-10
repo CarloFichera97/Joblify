@@ -5,29 +5,28 @@ import {
   removeJobApplication,
 } from "./../actions/jobApplications";
 import JobForm from "./JobForm";
-const EditJobApplication = (props) => {
-  return (
-    <div>
-      <JobForm
-        jobApplication={props.jobApplication}
-        onSubmit={(jobApplication) => {
-          props.dispatch(
-            editJobApplication(props.match.params.id, jobApplication)
-          );
-          props.history.push("/");
-        }}
-      />
-      <button
-        onClick={() => {
-          props.dispatch(removeJobApplication(props.match.params.id));
-          props.history.push("/");
-        }}
-      >
-        Remove
-      </button>
-    </div>
-  );
-};
+export class EditJobApplication extends React.Component {
+  onSubmit = (jobApplication) => {
+    this.props.onSubmit(jobApplication);
+    this.props.history.push("/");
+  };
+  onClick = () => {
+    this.props.onClick();
+    this.props.history.push("/");
+  };
+
+  render() {
+    return (
+      <div>
+        <JobForm
+          jobApplication={this.props.jobApplication}
+          onSubmit={this.onSubmit}
+        />
+        <button onClick={this.onClick}>Remove</button>
+      </div>
+    );
+  }
+}
 
 const mapStateToProps = (state, props) => {
   return {
@@ -36,4 +35,13 @@ const mapStateToProps = (state, props) => {
     }),
   };
 };
-export default connect(mapStateToProps)(EditJobApplication);
+
+const mapDispatchToProps = (dispatch, props) => {
+  return {
+    onSubmit: (jobApplication) =>
+      dispatch(editJobApplication(props.match.params.id, jobApplication)),
+    onClick: () => dispatch(removeJobApplication(props.match.params.id)),
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(EditJobApplication);
