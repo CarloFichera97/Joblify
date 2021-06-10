@@ -7,6 +7,7 @@ import HelpPage from "./../components/HelpPage";
 import JobApplicationDashboard from "./../components/JobApplicationDashboard";
 import EditJobApplication from "./../components/EditJobApplication";
 import AddJobApplication from "./../components/AddJobApplication";
+import ViewJobApplication from "./../components/ViewJobApplication";
 
 const AppRouter = () => (
   <BrowserRouter>
@@ -16,6 +17,7 @@ const AppRouter = () => (
         <Route path="/" component={JobApplicationDashboard} exact={true} />
         <Route path="/create" component={AddJobApplication} />
         <Route path="/edit/:id" component={EditJobApplication} />
+        <Route path="/view/:id" component={ViewJobApplication} />
         <Route path="/help" component={HelpPage} />
         <Route component={NotFoundPage} />
       </Switch>

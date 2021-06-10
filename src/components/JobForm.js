@@ -8,12 +8,21 @@ export default class JobForm extends React.Component {
     this.state = {
       company: props.jobApplication ? props.jobApplication.company : "",
       role: props.jobApplication ? props.jobApplication.role : "",
-      salary: props.jobApplication ? props.jobApplication.salary : "",
+      salary: props.jobApplication ? props.jobApplication.salary / 100 : "",
       status: props.jobApplication ? props.jobApplication.status : "",
       description: props.jobApplication ? props.jobApplication.description : "",
       notes: props.jobApplication ? props.jobApplication.notes : "",
       createdOn: props.jobApplication
         ? moment(props.jobApplication.createdOn)
+        : "",
+      recruiterFullName: props.jobApplication
+        ? props.jobApplication.recruiterFullName
+        : "",
+      recruiterEmail: props.jobApplication
+        ? props.jobApplication.recruiterEmail
+        : "",
+      recruiterPhoneNumber: props.jobApplication
+        ? props.jobApplication.recruiterPhoneNumber
         : "",
       calendarFocused: false,
       error: "",
@@ -49,6 +58,23 @@ export default class JobForm extends React.Component {
     this.setState(() => ({ notes }));
   };
 
+  onNameChange = (e) => {
+    const recruiterFullName = e.target.value;
+    this.setState(() => ({ recruiterFullName }));
+  };
+
+  onEmailChange = (e) => {
+    const recruiterEmail = e.target.value;
+    this.setState(() => ({ recruiterEmail }));
+  };
+
+  onNumberChange = (e) => {
+    const recruiterPhoneNumber = e.target.value;
+    if (!recruiterPhoneNumber || recruiterPhoneNumber.match(/^\d{1,}?$/)) {
+      this.setState(() => ({ recruiterPhoneNumber }));
+    }
+  };
+
   onDateChange = (createdOn) => {
     if (createdOn) {
       this.setState(() => ({
@@ -74,11 +100,14 @@ export default class JobForm extends React.Component {
       this.props.onSubmit({
         company: this.state.company,
         role: this.state.role,
-        salary: this.state.salary,
+        salary: parseFloat(this.state.salary, 10) * 100,
         description: this.state.description,
         status: this.state.status,
         createdOn: this.state.createdOn,
         notes: this.state.notes,
+        recruiterFullName: this.state.recruiterFullName,
+        recruiterEmail: this.state.recruiterEmail,
+        recruiterPhoneNumber: this.state.recruiterPhoneNumber,
       });
     }
   };
@@ -118,6 +147,27 @@ export default class JobForm extends React.Component {
             placeholder="Status"
             value={this.state.status}
             onChange={this.onStatusChange}
+          />
+
+          <input
+            type="text"
+            placeholder="Recruiter Name"
+            value={this.state.recruiterFullName}
+            onChange={this.onNameChange}
+          />
+
+          <input
+            type="email"
+            placeholder="Recruiter Email"
+            value={this.state.recruiterEmail}
+            onChange={this.onEmailChange}
+          />
+
+          <input
+            type="text"
+            placeholder="Recruiter Number"
+            value={this.state.recruiterPhoneNumber}
+            onChange={this.onNumberChange}
           />
           <SingleDatePicker
             date={this.state.createdOn}

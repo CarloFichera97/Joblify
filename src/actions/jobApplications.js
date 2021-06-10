@@ -8,6 +8,9 @@ export const addJobApplication = ({
   notes = "",
   createdOn = undefined,
   status = "",
+  recruiterFullName = "",
+  recruiterEmail = "",
+  recruiterPhoneNumber = "",
 } = {}) => ({
   type: "ADD_JOB_APPLICATION",
   jobApplication: {
@@ -19,6 +22,9 @@ export const addJobApplication = ({
     notes,
     createdOn,
     status,
+    recruiterFullName,
+    recruiterEmail,
+    recruiterPhoneNumber,
   },
 });
 
@@ -44,6 +50,11 @@ const demo = {
       notes: "xxxxx",
       id: "unique ID",
       status: "xxxxx",
+      rectruiter: {
+        fullName: "XXXXX",
+        email: "XXXX",
+        number: "XXX",
+      },
     },
   ],
   filters: {

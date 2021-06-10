@@ -46,7 +46,7 @@ test("Should Not change Role Input", () => {
   wrapper.find("input").at(1).simulate("change", {
     target: { value },
   });
-  expect(wrapper.state("role")).toBe("");
+  expect(wrapper.state("role")).toBe(value);
   expect(wrapper).toMatchSnapshot();
 });
 
@@ -110,6 +110,46 @@ test("Should change Status Input", () => {
   expect(wrapper).toMatchSnapshot();
 });
 
+test("Should change Recruiter Name Input", () => {
+  const wrapper = shallow(<JobForm />);
+  const value = "RECRUITER FULL NAME";
+  wrapper.find("input").at(5).simulate("change", {
+    target: { value },
+  });
+  expect(wrapper.state("recruiterFullName")).toBe(value);
+  expect(wrapper).toMatchSnapshot();
+});
+
+test("Should change Recruiter Email Input", () => {
+  const wrapper = shallow(<JobForm />);
+  const value = "RECRUITER EMAIL";
+  wrapper.find("input").at(6).simulate("change", {
+    target: { value },
+  });
+  expect(wrapper.state("recruiterEmail")).toBe(value);
+  expect(wrapper).toMatchSnapshot();
+});
+
+test("Should NOT change Recruiter Phone Number Input", () => {
+  const wrapper = shallow(<JobForm />);
+  const value = "RECRUITER PHONE NUMBER";
+  wrapper.find("input").at(7).simulate("change", {
+    target: { value },
+  });
+  expect(wrapper.state("recruiterPhoneNumber")).toBe("");
+  expect(wrapper).toMatchSnapshot();
+});
+
+test("Should NOT change Recruiter Phone Number Input", () => {
+  const wrapper = shallow(<JobForm />);
+  const value = "22";
+  wrapper.find("input").at(7).simulate("change", {
+    target: { value },
+  });
+  expect(wrapper.state("recruiterPhoneNumber")).toBe(value);
+  expect(wrapper).toMatchSnapshot();
+});
+
 test("Should change textarea Input", () => {
   const wrapper = shallow(<JobForm />);
   const value = "textarea";
@@ -147,6 +187,9 @@ test("Should call onSubmit prop for valid form submission", () => {
     status: testDataArray[0].status,
     createdOn: moment(),
     notes: testDataArray[0].notes,
+    recruiterFullName: testDataArray[0].recruiterFullName,
+    recruiterEmail: testDataArray[0].recruiterEmail,
+    recruiterPhoneNumber: testDataArray[0].recruiterPhoneNumber,
   });
 });
 

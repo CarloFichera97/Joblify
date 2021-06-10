@@ -36,8 +36,8 @@ store.dispatch(
   addJobApplication({
     company: "Company ONE",
     role: "Electrical Engineer",
-    salary: 500000,
-    createdOn: -244,
+    salary: 5000000,
+    createdOn: 1000000000000,
   })
 );
 console.log(store.getState());
@@ -47,7 +47,7 @@ store.dispatch(
   addJobApplication({
     company: "Company TWO",
     role: "Software Engineer",
-    salary: 700000,
+    salary: 7000000,
     description: "Description",
     notes: "XXXXXXXXXXXXXXXXXX",
     status: "XXXXXXXXXXXXXXXXXXXX",
@@ -60,7 +60,7 @@ store.dispatch(
   addJobApplication({
     company: "Company THREE",
     role: "Industrial Engineer",
-    salary: 900000,
+    salary: 9000000,
     description: "Description",
     notes: "XXXXXXXXXXXXXXXXXX",
     status: "XXXXXXXXXXXXXXXXXXXX",

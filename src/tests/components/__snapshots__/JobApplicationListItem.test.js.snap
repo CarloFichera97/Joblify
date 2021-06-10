@@ -2,24 +2,36 @@
 
 exports[`Should render Job Application List correctly with inputs 1`] = `
 <div>
+  en-gb
+  <h2>
+    There are a total of 
+    4
+     Job Applications listed for the filters selected
+  </h2>
   <div
     key="1"
   >
     <Link
       replace={false}
-      to="/edit/1"
+      to="/view/1"
     >
       <h3>
         Company: 
         COMPANY ONE
-         Role: 
-        JOB ONE
       </h3>
     </Link>
     <p>
+       Role: 
+      JOB ONE
+       
+    </p>
+    <p>
       Salary: 
-      1000
-      $ 
+      £10.00
+       
+    </p>
+    <p>
+      January 1st, 1970
     </p>
   </div>
   <div
@@ -27,19 +39,25 @@ exports[`Should render Job Application List correctly with inputs 1`] = `
   >
     <Link
       replace={false}
-      to="/edit/2"
+      to="/view/2"
     >
       <h3>
         Company: 
         COMPANY TWO
-         Role: 
-        JOB TWO
       </h3>
     </Link>
     <p>
+       Role: 
+      JOB TWO
+       
+    </p>
+    <p>
       Salary: 
-      2000
-      $ 
+      £20.00
+       
+    </p>
+    <p>
+      December 28th, 1969
     </p>
   </div>
   <div
@@ -47,19 +65,25 @@ exports[`Should render Job Application List correctly with inputs 1`] = `
   >
     <Link
       replace={false}
-      to="/edit/3"
+      to="/view/3"
     >
       <h3>
         Company: 
         COMPANY THREE
-         Role: 
-        JOB THREE
       </h3>
     </Link>
     <p>
+       Role: 
+      JOB THREE
+       
+    </p>
+    <p>
       Salary: 
-      500
-      $ 
+      £05.00
+       
+    </p>
+    <p>
+      January 5th, 1970
     </p>
   </div>
   <div
@@ -67,22 +91,37 @@ exports[`Should render Job Application List correctly with inputs 1`] = `
   >
     <Link
       replace={false}
-      to="/edit/4"
+      to="/view/4"
     >
       <h3>
         Company: 
         COMPANY FOUR
-         Role: 
-        JOB FOUR
       </h3>
     </Link>
     <p>
+       Role: 
+      JOB FOUR
+       
+    </p>
+    <p>
       Salary: 
-      200
-      $ 
+      £02.00
+       
+    </p>
+    <p>
+      December 25th, 1969
     </p>
   </div>
 </div>
 `;
 
-exports[`Should render Job Application List correctly with no inputs 1`] = `<div />`;
+exports[`Should render Job Application List correctly with no inputs 1`] = `
+<div>
+  en-gb
+  <h2>
+    There are a total of 
+    0
+     Job Applications listed for the filters selected
+  </h2>
+</div>
+`;
