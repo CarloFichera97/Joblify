@@ -1,2 +1,7 @@
 node_modules
 package-lock.json
+public/index.bundle.js
+public/index.bundle.js.map
+public/styles.css
+public/styles.css.map
+

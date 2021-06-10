@@ -29,6 +29,107 @@ test("Should change Company Name Input", () => {
   expect(wrapper).toMatchSnapshot();
 });
 
+test("Should change Role Input", () => {
+  const wrapper = shallow(<JobForm />);
+  const value = "role";
+  wrapper.find("input").at(1).simulate("change", {
+    target: { value },
+  });
+  expect(wrapper.state("role")).toBe(value);
+  expect(wrapper).toMatchSnapshot();
+});
+
+///FAIL - TO ADD INPUT RESTRICTIONS
+test("Should Not change Role Input", () => {
+  const wrapper = shallow(<JobForm />);
+  const value = "role";
+  wrapper.find("input").at(1).simulate("change", {
+    target: { value },
+  });
+  expect(wrapper.state("role")).toBe("");
+  expect(wrapper).toMatchSnapshot();
+});
+
+test("Should NOT change Salary Input", () => {
+  const wrapper = shallow(<JobForm />);
+  const value = "salary";
+  wrapper.find("input").at(2).simulate("change", {
+    target: { value },
+  });
+  expect(wrapper.state("salary")).toBe("");
+  expect(wrapper).toMatchSnapshot();
+});
+
+test("Should change salary Input", () => {
+  const wrapper = shallow(<JobForm />);
+  const value = "21321321";
+  wrapper.find("input").at(2).simulate("change", {
+    target: { value },
+  });
+  expect(wrapper.state("salary")).toBe(value);
+  expect(wrapper).toMatchSnapshot();
+});
+
+test("Should change Role Input", () => {
+  const wrapper = shallow(<JobForm />);
+  const value = "Description";
+  wrapper.find("input").at(3).simulate("change", {
+    target: { value },
+  });
+  expect(wrapper.state("description")).toBe(value);
+  expect(wrapper).toMatchSnapshot();
+});
+
+test("Should change Description Input", () => {
+  const wrapper = shallow(<JobForm />);
+  const value = "9999";
+  wrapper.find("input").at(3).simulate("change", {
+    target: { value },
+  });
+  expect(wrapper.state("description")).toBe(value);
+  expect(wrapper).toMatchSnapshot();
+});
+
+test("Should change Status Input", () => {
+  const wrapper = shallow(<JobForm />);
+  const value = "status";
+  wrapper.find("input").at(4).simulate("change", {
+    target: { value },
+  });
+  expect(wrapper.state("status")).toBe(value);
+  expect(wrapper).toMatchSnapshot();
+});
+
+test("Should change Status Input", () => {
+  const wrapper = shallow(<JobForm />);
+  const value = "9999";
+  wrapper.find("input").at(4).simulate("change", {
+    target: { value },
+  });
+  expect(wrapper.state("status")).toBe(value);
+  expect(wrapper).toMatchSnapshot();
+});
+
+test("Should change textarea Input", () => {
+  const wrapper = shallow(<JobForm />);
+  const value = "textarea";
+  wrapper.find("textarea").simulate("change", {
+    target: { value },
+  });
+  expect(wrapper.state("notes")).toBe(value);
+  expect(wrapper).toMatchSnapshot();
+});
+
+test("Should change textarea Input", () => {
+  const wrapper = shallow(<JobForm />);
+  const value = "9999";
+  wrapper.find("textarea").simulate("change", {
+    target: { value },
+  });
+  expect(wrapper.state("notes")).toBe(value);
+  expect(wrapper).toMatchSnapshot();
+});
+
 test("Should call onSubmit prop for valid form submission", () => {
   const onSubmitSpy = jest.fn();
   const wrapper = shallow(
