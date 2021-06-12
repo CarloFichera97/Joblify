@@ -12,23 +12,6 @@ const config = {
 
 firebase.initializeApp(config);
 
-firebase
-  .database()
-  .ref()
-  .set({
-    fullName: "Cale Fix",
-    age: 235,
-    isSingle: false,
-    location: {
-      city: "Philadelphia",
-      via: "via di via",
-    },
-  });
+const database = firebase.database();
 
-firebase.database().ref("age").set(27);
-
-firebase.database().ref("location/city").set("New York");
-firebase.database().ref("attributes").set({
-  height: "192meters",
-  weight: "20 pounds",
-});
+export { firebase, database as default };

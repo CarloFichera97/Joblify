@@ -14,7 +14,7 @@ export default class JobForm extends React.Component {
       notes: props.jobApplication ? props.jobApplication.notes : "",
       createdOn: props.jobApplication
         ? moment(props.jobApplication.createdOn)
-        : "",
+        : moment(),
       recruiterFullName: props.jobApplication
         ? props.jobApplication.recruiterFullName
         : "",
@@ -103,7 +103,7 @@ export default class JobForm extends React.Component {
         salary: parseFloat(this.state.salary, 10) * 100,
         description: this.state.description,
         status: this.state.status,
-        createdOn: this.state.createdOn,
+        createdOn: this.state.createdOn.valueOf(),
         notes: this.state.notes,
         recruiterFullName: this.state.recruiterFullName,
         recruiterEmail: this.state.recruiterEmail,
@@ -132,7 +132,7 @@ export default class JobForm extends React.Component {
           />
           <input
             type="text"
-            placeholder="Salary ($)"
+            placeholder="Salary"
             value={this.state.salary}
             onChange={this.onSalaryChange}
           />

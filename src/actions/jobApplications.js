@@ -1,32 +1,66 @@
 import { v4 as uuidv4 } from "uuid";
+import database from "./../firebase/firebase";
 
-export const addJobApplication = ({
-  company = "",
-  role = "",
-  salary = undefined,
-  description = "",
-  notes = "",
-  createdOn = undefined,
-  status = "",
-  recruiterFullName = "",
-  recruiterEmail = "",
-  recruiterPhoneNumber = "",
-} = {}) => ({
+//Basic Logic before firebase Integration
+//Component calls action generator
+//Action generator returns object
+//Component dispatches object
+//Redux store changes
+
+//Basic logic after firebase Integration
+//Component calls action generator
+//Action Generator returns function()
+//Function runs
+
+export const addJobApplication = (jobApplication) => ({
   type: "ADD_JOB_APPLICATION",
-  jobApplication: {
-    id: uuidv4(),
-    company,
-    role,
-    salary,
-    description,
-    notes,
-    createdOn,
-    status,
-    recruiterFullName,
-    recruiterEmail,
-    recruiterPhoneNumber,
-  },
+  jobApplication,
 });
+
+//Responsible for writing to the database the new job application
+//Responsible for calling addJobApplication and updating the store
+export const startAddJobApplication = (jobApplicationData) => {
+  return (dispatch) => {
+    const {
+      company = "",
+      role = "",
+      salary = 0,
+      description = "",
+      notes = "",
+      createdOn = 0,
+      status = "",
+      recruiterFullName = "",
+      recruiterEmail = "",
+      recruiterPhoneNumber = "",
+    } = jobApplicationData;
+    const jobApplication = {
+      company,
+      role,
+      salary,
+      description,
+      notes,
+      createdOn,
+      status,
+      recruiterFullName,
+      recruiterEmail,
+      recruiterPhoneNumber,
+    };
+    //Once the data is changed change the store
+    //When consuming the promise-->Access to ref --> Access to the
+    //Unique ID that was previously generated with uuidv4
+    database
+      .ref("Job_Applications")
+      .push(jobApplication)
+      .then((ref) => {
+        dispatch(
+          addJobApplication({
+            id: ref.key,
+            ...jobApplication,
+          })
+        );
+      });
+  };
+};
 
 export const editJobApplication = (id, updates) => ({
   type: "EDIT_JOB_APPLICATION",

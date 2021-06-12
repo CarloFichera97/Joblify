@@ -1,11 +1,11 @@
 import React from "react";
 import { connect } from "react-redux";
-import { addJobApplication } from "./../actions/jobApplications";
+import { startAddJobApplication } from "./../actions/jobApplications";
 import JobForm from "./JobForm";
 
 export class AddJobApplication extends React.Component {
   onSubmit = (jobApplication) => {
-    this.props.onSubmit(jobApplication);
+    this.props.startAddJobApplication(jobApplication);
     this.props.history.push("/");
   };
   render() {
@@ -19,7 +19,8 @@ export class AddJobApplication extends React.Component {
 
 //To simplify testing with spies
 const mapDispatchToProps = (dispatch) => ({
-  onSubmit: (jobApplication) => dispatch(addJobApplication(jobApplication)),
+  startAddJobApplication: (jobApplication) =>
+    dispatch(startAddJobApplication(jobApplication)),
 });
 
 export default connect(undefined, mapDispatchToProps)(AddJobApplication);
