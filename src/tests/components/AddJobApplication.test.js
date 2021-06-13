@@ -4,13 +4,18 @@ import { shallow } from "enzyme";
 import { AddJobApplication } from "./../../components/AddJobApplication";
 import { testDataArray, testData } from "./../fixtures/testData";
 
-let onSubmit, history, wrapper;
+let onSubmit, history, wrapper, startAddJobApplication;
 
 beforeEach(() => {
   onSubmit = jest.fn();
+  startAddJobApplication = jest.fn();
   history = { push: jest.fn() };
   wrapper = shallow(
-    <AddJobApplication onSubmit={onSubmit} history={history} />
+    <AddJobApplication
+      onSubmit={onSubmit}
+      startAddJobApplication={startAddJobApplication}
+      history={history}
+    />
   );
 });
 test("Should render AddJobApplication Correctly", () => {
@@ -20,6 +25,6 @@ test("Should render AddJobApplication Correctly", () => {
 test("Should handle onSubmit ", () => {
   wrapper.find("JobForm").prop("onSubmit")(testDataArray[0]);
   expect(history.push).toHaveBeenLastCalledWith("/");
-  expect(onSubmit).toHaveBeenLastCalledWith(testDataArray[0]);
+  expect(startAddJobApplication).toHaveBeenLastCalledWith(testDataArray[0]);
   expect(wrapper).toMatchSnapshot();
 });

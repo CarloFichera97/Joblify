@@ -20,7 +20,7 @@ exports[`Should NOT change Recruiter Phone Number Input 1`] = `
     />
     <input
       onChange={[Function]}
-      placeholder="Salary ($)"
+      placeholder="Salary"
       type="text"
       value=""
     />
@@ -61,7 +61,7 @@ exports[`Should NOT change Recruiter Phone Number Input 1`] = `
       calendarInfoPosition="bottom"
       customCloseIcon={null}
       customInputIcon={null}
-      date=""
+      date={"1970-01-01T00:00:00.000Z"}
       dayPickerNavigationInlineStyles={null}
       daySize={39}
       disableScroll={false}
@@ -181,7 +181,7 @@ exports[`Should NOT change Recruiter Phone Number Input 2`] = `
     />
     <input
       onChange={[Function]}
-      placeholder="Salary ($)"
+      placeholder="Salary"
       type="text"
       value=""
     />
@@ -222,7 +222,7 @@ exports[`Should NOT change Recruiter Phone Number Input 2`] = `
       calendarInfoPosition="bottom"
       customCloseIcon={null}
       customInputIcon={null}
-      date=""
+      date={"1970-01-01T00:00:00.000Z"}
       dayPickerNavigationInlineStyles={null}
       daySize={39}
       disableScroll={false}
@@ -342,7 +342,7 @@ exports[`Should NOT change Salary Input 1`] = `
     />
     <input
       onChange={[Function]}
-      placeholder="Salary ($)"
+      placeholder="Salary"
       type="text"
       value=""
     />
@@ -383,7 +383,7 @@ exports[`Should NOT change Salary Input 1`] = `
       calendarInfoPosition="bottom"
       customCloseIcon={null}
       customInputIcon={null}
-      date=""
+      date={"1970-01-01T00:00:00.000Z"}
       dayPickerNavigationInlineStyles={null}
       daySize={39}
       disableScroll={false}
@@ -503,7 +503,7 @@ exports[`Should Not change Role Input 1`] = `
     />
     <input
       onChange={[Function]}
-      placeholder="Salary ($)"
+      placeholder="Salary"
       type="text"
       value=""
     />
@@ -544,7 +544,7 @@ exports[`Should Not change Role Input 1`] = `
       calendarInfoPosition="bottom"
       customCloseIcon={null}
       customInputIcon={null}
-      date=""
+      date={"1970-01-01T00:00:00.000Z"}
       dayPickerNavigationInlineStyles={null}
       daySize={39}
       disableScroll={false}
@@ -664,7 +664,7 @@ exports[`Should change Company Name Input 1`] = `
     />
     <input
       onChange={[Function]}
-      placeholder="Salary ($)"
+      placeholder="Salary"
       type="text"
       value=""
     />
@@ -705,7 +705,7 @@ exports[`Should change Company Name Input 1`] = `
       calendarInfoPosition="bottom"
       customCloseIcon={null}
       customInputIcon={null}
-      date=""
+      date={"1970-01-01T00:00:00.000Z"}
       dayPickerNavigationInlineStyles={null}
       daySize={39}
       disableScroll={false}
@@ -825,7 +825,7 @@ exports[`Should change Company Name Input 2`] = `
     />
     <input
       onChange={[Function]}
-      placeholder="Salary ($)"
+      placeholder="Salary"
       type="text"
       value=""
     />
@@ -866,7 +866,7 @@ exports[`Should change Company Name Input 2`] = `
       calendarInfoPosition="bottom"
       customCloseIcon={null}
       customInputIcon={null}
-      date=""
+      date={"1970-01-01T00:00:00.000Z"}
       dayPickerNavigationInlineStyles={null}
       daySize={39}
       disableScroll={false}
@@ -986,7 +986,7 @@ exports[`Should change Description Input 1`] = `
     />
     <input
       onChange={[Function]}
-      placeholder="Salary ($)"
+      placeholder="Salary"
       type="text"
       value=""
     />
@@ -1027,7 +1027,7 @@ exports[`Should change Description Input 1`] = `
       calendarInfoPosition="bottom"
       customCloseIcon={null}
       customInputIcon={null}
-      date=""
+      date={"1970-01-01T00:00:00.000Z"}
       dayPickerNavigationInlineStyles={null}
       daySize={39}
       disableScroll={false}
@@ -1147,7 +1147,7 @@ exports[`Should change Recruiter Email Input 1`] = `
     />
     <input
       onChange={[Function]}
-      placeholder="Salary ($)"
+      placeholder="Salary"
       type="text"
       value=""
     />
@@ -1188,7 +1188,7 @@ exports[`Should change Recruiter Email Input 1`] = `
       calendarInfoPosition="bottom"
       customCloseIcon={null}
       customInputIcon={null}
-      date=""
+      date={"1970-01-01T00:00:00.000Z"}
       dayPickerNavigationInlineStyles={null}
       daySize={39}
       disableScroll={false}
@@ -1308,7 +1308,7 @@ exports[`Should change Recruiter Name Input 1`] = `
     />
     <input
       onChange={[Function]}
-      placeholder="Salary ($)"
+      placeholder="Salary"
       type="text"
       value=""
     />
@@ -1349,7 +1349,7 @@ exports[`Should change Recruiter Name Input 1`] = `
       calendarInfoPosition="bottom"
       customCloseIcon={null}
       customInputIcon={null}
-      date=""
+      date={"1970-01-01T00:00:00.000Z"}
       dayPickerNavigationInlineStyles={null}
       daySize={39}
       disableScroll={false}
@@ -1469,7 +1469,7 @@ exports[`Should change Role Input 1`] = `
     />
     <input
       onChange={[Function]}
-      placeholder="Salary ($)"
+      placeholder="Salary"
       type="text"
       value=""
     />
@@ -1510,7 +1510,7 @@ exports[`Should change Role Input 1`] = `
       calendarInfoPosition="bottom"
       customCloseIcon={null}
       customInputIcon={null}
-      date=""
+      date={"1970-01-01T00:00:00.000Z"}
       dayPickerNavigationInlineStyles={null}
       daySize={39}
       disableScroll={false}
@@ -1630,7 +1630,7 @@ exports[`Should change Role Input 2`] = `
     />
     <input
       onChange={[Function]}
-      placeholder="Salary ($)"
+      placeholder="Salary"
       type="text"
       value=""
     />
@@ -1671,7 +1671,7 @@ exports[`Should change Role Input 2`] = `
       calendarInfoPosition="bottom"
       customCloseIcon={null}
       customInputIcon={null}
-      date=""
+      date={"1970-01-01T00:00:00.000Z"}
       dayPickerNavigationInlineStyles={null}
       daySize={39}
       disableScroll={false}
@@ -1791,7 +1791,7 @@ exports[`Should change Status Input 1`] = `
     />
     <input
       onChange={[Function]}
-      placeholder="Salary ($)"
+      placeholder="Salary"
       type="text"
       value=""
     />
@@ -1832,7 +1832,7 @@ exports[`Should change Status Input 1`] = `
       calendarInfoPosition="bottom"
       customCloseIcon={null}
       customInputIcon={null}
-      date=""
+      date={"1970-01-01T00:00:00.000Z"}
       dayPickerNavigationInlineStyles={null}
       daySize={39}
       disableScroll={false}
@@ -1952,7 +1952,7 @@ exports[`Should change Status Input 2`] = `
     />
     <input
       onChange={[Function]}
-      placeholder="Salary ($)"
+      placeholder="Salary"
       type="text"
       value=""
     />
@@ -1993,7 +1993,7 @@ exports[`Should change Status Input 2`] = `
       calendarInfoPosition="bottom"
       customCloseIcon={null}
       customInputIcon={null}
-      date=""
+      date={"1970-01-01T00:00:00.000Z"}
       dayPickerNavigationInlineStyles={null}
       daySize={39}
       disableScroll={false}
@@ -2113,7 +2113,7 @@ exports[`Should change salary Input 1`] = `
     />
     <input
       onChange={[Function]}
-      placeholder="Salary ($)"
+      placeholder="Salary"
       type="text"
       value="21321321"
     />
@@ -2154,7 +2154,7 @@ exports[`Should change salary Input 1`] = `
       calendarInfoPosition="bottom"
       customCloseIcon={null}
       customInputIcon={null}
-      date=""
+      date={"1970-01-01T00:00:00.000Z"}
       dayPickerNavigationInlineStyles={null}
       daySize={39}
       disableScroll={false}
@@ -2274,7 +2274,7 @@ exports[`Should change textarea Input 1`] = `
     />
     <input
       onChange={[Function]}
-      placeholder="Salary ($)"
+      placeholder="Salary"
       type="text"
       value=""
     />
@@ -2315,7 +2315,7 @@ exports[`Should change textarea Input 1`] = `
       calendarInfoPosition="bottom"
       customCloseIcon={null}
       customInputIcon={null}
-      date=""
+      date={"1970-01-01T00:00:00.000Z"}
       dayPickerNavigationInlineStyles={null}
       daySize={39}
       disableScroll={false}
@@ -2435,7 +2435,7 @@ exports[`Should change textarea Input 2`] = `
     />
     <input
       onChange={[Function]}
-      placeholder="Salary ($)"
+      placeholder="Salary"
       type="text"
       value=""
     />
@@ -2476,7 +2476,7 @@ exports[`Should change textarea Input 2`] = `
       calendarInfoPosition="bottom"
       customCloseIcon={null}
       customInputIcon={null}
-      date=""
+      date={"1970-01-01T00:00:00.000Z"}
       dayPickerNavigationInlineStyles={null}
       daySize={39}
       disableScroll={false}
@@ -2596,7 +2596,7 @@ exports[`Should change the calendarFocused state 1`] = `
     />
     <input
       onChange={[Function]}
-      placeholder="Salary ($)"
+      placeholder="Salary"
       type="text"
       value=""
     />
@@ -2637,7 +2637,7 @@ exports[`Should change the calendarFocused state 1`] = `
       calendarInfoPosition="bottom"
       customCloseIcon={null}
       customInputIcon={null}
-      date=""
+      date={"1970-01-01T00:00:00.000Z"}
       dayPickerNavigationInlineStyles={null}
       daySize={39}
       disableScroll={false}
@@ -2757,7 +2757,7 @@ exports[`Should change the date state 1`] = `
     />
     <input
       onChange={[Function]}
-      placeholder="Salary ($)"
+      placeholder="Salary"
       type="text"
       value=""
     />

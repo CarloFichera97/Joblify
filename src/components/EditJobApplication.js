@@ -1,8 +1,8 @@
 import React from "react";
 import { connect } from "react-redux";
 import {
-  editJobApplication,
-  removeJobApplication,
+  startEditJobApplication,
+  startRemoveJobApplication,
 } from "./../actions/jobApplications";
 import JobForm from "./JobForm";
 export class EditJobApplication extends React.Component {
@@ -39,8 +39,8 @@ const mapStateToProps = (state, props) => {
 const mapDispatchToProps = (dispatch, props) => {
   return {
     onSubmit: (jobApplication) =>
-      dispatch(editJobApplication(props.match.params.id, jobApplication)),
-    onClick: () => dispatch(removeJobApplication(props.match.params.id)),
+      dispatch(startEditJobApplication(props.match.params.id, jobApplication)),
+    onClick: () => dispatch(startRemoveJobApplication(props.match.params.id)),
   };
 };
 

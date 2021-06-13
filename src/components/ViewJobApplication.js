@@ -3,11 +3,11 @@ import { connect } from "react-redux";
 import moment from "moment";
 import numeral from "numeral";
 
-import { removeJobApplication } from "./../actions/jobApplications";
+import { startRemoveJobApplication } from "./../actions/jobApplications";
 
 export class ViewJobApplication extends React.Component {
   onClickRemove = () => {
-    this.props.dispatch(removeJobApplication(this.props.jobApplication.id));
+    this.props.dispatch(startRemoveJobApplication(this.props.jobApplication.id));
     this.props.history.push("/");
   };
 

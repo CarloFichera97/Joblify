@@ -2,30 +2,21 @@ import {
   addJobApplication,
   editJobApplication,
   removeJobApplication,
+  startAddJobApplication,
 } from "./../../actions/jobApplications";
+import database from "./../../firebase/firebase";
+import configureMockStore from "redux-mock-store";
+import thunk from "redux-thunk";
 
-import {
-  testDataArray,
-  testData,
-  defaultTestData,
-} from "./../fixtures/testData";
+const createMockStore = configureMockStore([thunk]);
 
-test("Should add a Job Application with non default values", () => {
+import { testDataArray, testData, testDataNoID } from "./../fixtures/testData";
+
+test("Sho@uld add a Job Application with non default values", () => {
   expect(addJobApplication(testData)).toEqual({
     type: "ADD_JOB_APPLICATION",
     jobApplication: {
       ...testData,
-      id: expect.any(String),
-    },
-  });
-});
-
-test("Should add a Job Application with default values", () => {
-  expect(addJobApplication()).toEqual({
-    type: "ADD_JOB_APPLICATION",
-    jobApplication: {
-      ...defaultTestData,
-      id: expect.any(String),
     },
   });
 });
@@ -42,5 +33,21 @@ test("Should edit a job application", () => {
     type: "EDIT_JOB_APPLICATION",
     id: testDataArray[1].id,
     updates: { ...testData },
+  });
+});
+
+test("Should add Job Application to database and store", (done) => {
+  const store = createMockStore({});
+
+  store.dispatch(startAddJobApplication(testDataNoID)).then(() => {
+    const actions = store.getActions();
+    expect(actions[0]).toEqual({
+      type: "ADD_JOB_APPLICATION",
+      jobApplication: {
+        id: expect.any(String),
+        ...testDataNoID,
+      },
+    });
+    done();
   });
 });

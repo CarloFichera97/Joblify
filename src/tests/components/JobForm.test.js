@@ -185,7 +185,7 @@ test("Should call onSubmit prop for valid form submission", () => {
     salary: testDataArray[0].salary,
     description: testDataArray[0].description,
     status: testDataArray[0].status,
-    createdOn: moment(),
+    createdOn: 0,
     notes: testDataArray[0].notes,
     recruiterFullName: testDataArray[0].recruiterFullName,
     recruiterEmail: testDataArray[0].recruiterEmail,

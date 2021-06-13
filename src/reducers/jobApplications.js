@@ -19,6 +19,8 @@ const jobApplicationsReducer = (
           return jobApplication;
         }
       });
+    case "SET_JOB_APPLICATIONS":
+      return action.jobApplications;
     default:
       return state || [];
   }

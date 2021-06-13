@@ -22,7 +22,7 @@ import {
 } from "./actions/filters";
 
 import {
-  addJobApplication,
+  startSetJobApplication,
   editJobApplication,
   removeJobApplication,
 } from "./actions/jobApplications";
@@ -36,5 +36,9 @@ const jsx = (
     </Provider>
   </div>
 );
+//Loading a message until we get the appropriate data from firebase
+ReactDOM.render(<p>Loading....</p>, document.getElementById("app"));
 
-ReactDOM.render(jsx, document.getElementById("app"));
+store.dispatch(startSetJobApplication()).then(() => {
+  ReactDOM.render(jsx, document.getElementById("app"));
+});

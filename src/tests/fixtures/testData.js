@@ -80,6 +80,19 @@ export const defaultTestData = {
   recruiterPhoneNumber: "",
 };
 
+export const testDataNoID = {
+  company: "TEST",
+  role: "TEST",
+  salary: "TEST",
+  description: "TEST",
+  notes: "TEST",
+  createdOn: "TEST",
+  status: "TEST",
+  recruiterEmail: "TEST",
+  recruiterFullName: "TEST",
+  recruiterPhoneNumber: "TEST",
+};
+
 export const filtersTestData1 = {
   startDate: undefined,
   endDate: undefined,
