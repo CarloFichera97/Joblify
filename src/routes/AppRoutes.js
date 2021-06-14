@@ -10,6 +10,7 @@ import ViewJobApplication from "./../components/ViewJobApplication";
 import LoginPage from "../components/LoginPage.js";
 //Route functionality belkow in the Switch is going to be handled by PrivateRoute.js file
 import PrivateRoute from "./PrivateRoute";
+import PublicRoute from "./PublicRoute";
 //Useful to have history available everywhere in the app and redirect
 export const history = createBrowserHistory();
 
@@ -18,7 +19,7 @@ const AppRouter = () => (
   <Router history={history}>
     <div>
       <Switch>
-        <Route path="/" component={LoginPage} exact={true} />
+        <PublicRoute path="/" component={LoginPage} exact={true} />
         <PrivateRoute path="/dashboard" component={JobApplicationDashboard} />
         <PrivateRoute path="/create" component={AddJobApplication} />
         <PrivateRoute path="/edit/:id" component={EditJobApplication} />

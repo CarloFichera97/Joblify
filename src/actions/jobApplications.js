@@ -35,7 +35,8 @@ export const setJobApplications = (jobApplications) => ({
 //Responsible for writing to the database the new job application
 //Responsible for calling addJobApplication and updating the store
 export const startAddJobApplication = (jobApplicationData) => {
-  return (dispatch) => {
+  return (dispatch, getState) => {
+    const uid = getState().auth.uid;
     const {
       company = "",
       role = "",
@@ -64,7 +65,7 @@ export const startAddJobApplication = (jobApplicationData) => {
     //When consuming the promise-->Access to ref --> Access to the
     //Unique ID that was previously generated with uuidv4
     return database
-      .ref("Job_Applications")
+      .ref(`users/${uid}/Job_Applications`)
       .push(jobApplication)
       .then((ref) => {
         dispatch(
@@ -81,11 +82,12 @@ export const startAddJobApplication = (jobApplicationData) => {
 //2. Parse the data into an array
 //3. Dispatch SET_JOB_APPLICATION
 export const startSetJobApplication = () => {
-  return (dispatch) => {
+  return (dispatch, getState) => {
     //Double return is used in order to return the promise
     //inside the outer return, this is fundamental!
+    const uid = getState().auth.uid;
     return database
-      .ref("Job_Applications")
+      .ref(`users/${uid}/Job_Applications`)
       .once("value")
       .then((snapshot) => {
         const jobApplications = [];
@@ -101,9 +103,10 @@ export const startSetJobApplication = () => {
 };
 
 export const startRemoveJobApplication = (id) => {
-  return (dispatch) => {
+  return (dispatch, getState) => {
+    const uid = getState().auth.uid;
     return database
-      .ref(`Job_Applications/${id}`)
+      .ref(`users/${uid}/Job_Applications/${id}`)
       .remove()
       .then(() => {
         dispatch(removeJobApplication(id));
@@ -112,9 +115,10 @@ export const startRemoveJobApplication = (id) => {
 };
 
 export const startEditJobApplication = (id, updates) => {
-  return (dispatch) => {
+  return (dispatch, getState) => {
+    const uid = getState().auth.uid;
     return database
-      .ref(`Job_Applications/${id}`)
+      .ref(`users/${uid}/Job_Applications/${id}`)
       .update(updates)
       .then(() => {
         dispatch(editJobApplication(id, updates));

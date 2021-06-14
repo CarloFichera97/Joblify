@@ -6,7 +6,7 @@ import JobForm from "./JobForm";
 export class AddJobApplication extends React.Component {
   onSubmit = (jobApplication) => {
     this.props.startAddJobApplication(jobApplication);
-    this.props.history.push("/");
+    this.props.history.push("/dashboard");
   };
   render() {
     return (
