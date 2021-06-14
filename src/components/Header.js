@@ -1,10 +1,11 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import { startLogout } from "./LoginPage";
 const Header = () => (
   <header>
     <h1>Job Tracker</h1>
     <NavLink
-      to="/"
+      to="/dashboard"
       activeClassName="
     is-active"
       exact={true}
@@ -17,6 +18,7 @@ const Header = () => (
     <NavLink to="/help" activeClassName="is-active">
       Help Page
     </NavLink>
+    <button onClick={startLogout}>Logout</button>
   </header>
 );
 

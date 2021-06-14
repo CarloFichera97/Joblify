@@ -8,7 +8,7 @@ import { startRemoveJobApplication } from "./../actions/jobApplications";
 export class ViewJobApplication extends React.Component {
   onClickRemove = () => {
     this.props.dispatch(startRemoveJobApplication(this.props.jobApplication.id));
-    this.props.history.push("/");
+    this.props.history.push("/dashboard");
   };
 
   onClickEdit = () => {

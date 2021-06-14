@@ -8,11 +8,11 @@ import JobForm from "./JobForm";
 export class EditJobApplication extends React.Component {
   onSubmit = (jobApplication) => {
     this.props.onSubmit(jobApplication);
-    this.props.history.push("/");
+    this.props.history.push("/dashboard");
   };
   onClick = () => {
     this.props.onClick();
-    this.props.history.push("/");
+    this.props.history.push("/dashboard");
   };
 
   render() {

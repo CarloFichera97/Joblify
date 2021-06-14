@@ -1,5 +1,6 @@
 //Connection to the database
 import firebase from "firebase";
+
 const config = {
   apiKey: "AIzaSyDMkWQ_DbbovtrPxidIyDQD0UafwabXJfo",
   authDomain: "job-tracker-app-1599c.firebaseapp.com",
@@ -11,7 +12,9 @@ const config = {
 };
 
 firebase.initializeApp(config);
+//Instance of a provider to provide Authentication -- Google
+const googleAuthProvider = new firebase.auth.GoogleAuthProvider();
 
 const database = firebase.database();
 
-export { firebase, database as default };
+export { firebase, database as default, googleAuthProvider };
