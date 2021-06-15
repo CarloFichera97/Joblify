@@ -15,6 +15,12 @@ export const PrivateRoute = (props) =>
     <Redirect to="/" />
   );
 
+//Once logged in the following happens
+//1. Set the value of user id onto the store
+//2. fetch the data on the database related to that user
+//3. Display the data on screen to the user
+
+//Looking whether there is actually a value for the Id to check if we are authenticated or not
 const mapStateToProps = (state) => ({
   isAuthenticated: !!state.auth.uid,
   //True if authenticated false if not

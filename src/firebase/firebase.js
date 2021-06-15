@@ -14,7 +14,15 @@ const config = {
 firebase.initializeApp(config);
 //Instance of a provider to provide Authentication -- Google
 const googleAuthProvider = new firebase.auth.GoogleAuthProvider();
+const facebookAuthProvider = new firebase.auth.FacebookAuthProvider();
+const gitHubAuthProvider = new firebase.auth.GithubAuthProvider();
 
 const database = firebase.database();
 
-export { firebase, database as default, googleAuthProvider };
+export {
+  firebase,
+  database as default,
+  googleAuthProvider,
+  facebookAuthProvider,
+  gitHubAuthProvider,
+};
