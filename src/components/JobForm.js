@@ -114,61 +114,9 @@ export default class JobForm extends React.Component {
 
   render() {
     return (
-      <div>
-        {this.state.error && this.state.error}
-        <form onSubmit={this.onSubmit}>
-          <input
-            type="text"
-            placeholder="Company Name"
-            autoFocus
-            value={this.state.company}
-            onChange={this.onCompanyChange}
-          />
-          <input
-            type="text"
-            placeholder="Role"
-            value={this.state.role}
-            onChange={this.onRoleChange}
-          />
-          <input
-            type="text"
-            placeholder="Salary"
-            value={this.state.salary}
-            onChange={this.onSalaryChange}
-          />
-          <input
-            type="text"
-            placeholder="Description"
-            value={this.state.description}
-            onChange={this.onDescriptionChange}
-          />
-          <input
-            type="text"
-            placeholder="Status"
-            value={this.state.status}
-            onChange={this.onStatusChange}
-          />
-
-          <input
-            type="text"
-            placeholder="Recruiter Name"
-            value={this.state.recruiterFullName}
-            onChange={this.onNameChange}
-          />
-
-          <input
-            type="email"
-            placeholder="Recruiter Email"
-            value={this.state.recruiterEmail}
-            onChange={this.onEmailChange}
-          />
-
-          <input
-            type="text"
-            placeholder="Recruiter Number"
-            value={this.state.recruiterPhoneNumber}
-            onChange={this.onNumberChange}
-          />
+      <div className="jobform-container">
+        <p className="error">{this.state.error && this.state.error}</p>
+        <p className="calendar">
           <SingleDatePicker
             date={this.state.createdOn}
             onDateChange={this.onDateChange}
@@ -176,15 +124,90 @@ export default class JobForm extends React.Component {
             onFocusChange={this.onFocusChange}
             numberOfMonths={1}
             isOutsideRange={(day) => false}
+            noBorder={true}
+            displayFormat={() => moment.localeData().longDateFormat("L")}
           />
-          <textarea
-            placeholder="Add a note for your job application"
-            value={this.state.notes}
-            onChange={this.onNotesChange}
-          ></textarea>
+        </p>
+        <div>
+          <form onSubmit={this.onSubmit}>
+            <div className="form form-companydetails">
+              <h1 className="title title-companydetails">Job Details</h1>
+              <input
+                className="input--jobform"
+                type="text"
+                placeholder="Company Name"
+                autoFocus
+                value={this.state.company}
+                onChange={this.onCompanyChange}
+              />
+              <input
+                className="input--jobform"
+                type="text"
+                placeholder="Role"
+                value={this.state.role}
+                onChange={this.onRoleChange}
+              />
+              <input
+                className="input--jobform"
+                type="text"
+                placeholder="Salary"
+                value={this.state.salary}
+                onChange={this.onSalaryChange}
+              />
+              <input
+                className="input--jobform"
+                type="text"
+                placeholder="Description"
+                value={this.state.description}
+                onChange={this.onDescriptionChange}
+              />
+              <input
+                className="input--jobform"
+                type="text"
+                placeholder="Status"
+                value={this.state.status}
+                onChange={this.onStatusChange}
+              />
 
-          <button>Add Job Application</button>
-        </form>
+              <textarea
+                rows="10"
+                placeholder="Add a note for your job application"
+                value={this.state.notes}
+                onChange={this.onNotesChange}
+              ></textarea>
+            </div>
+
+            <div className="jobform-container-recruiter">
+              <h1 className="title title-recruiterdetails">
+                Recruiter Details
+              </h1>
+              <input
+                className="input--jobform"
+                type="text"
+                placeholder="Recruiter Name"
+                value={this.state.recruiterFullName}
+                onChange={this.onNameChange}
+              />
+
+              <input
+                className="input--jobform"
+                type="email"
+                placeholder="Recruiter Email"
+                value={this.state.recruiterEmail}
+                onChange={this.onEmailChange}
+              />
+
+              <input
+                className="input--jobform"
+                type="text"
+                placeholder="Recruiter Number"
+                value={this.state.recruiterPhoneNumber}
+                onChange={this.onNumberChange}
+              />
+            </div>
+            <button className="button__jobForm">Add Job Application</button>
+          </form>
+        </div>
       </div>
     );
   }

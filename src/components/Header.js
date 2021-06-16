@@ -10,7 +10,6 @@ const Header = () => (
     <header>
       <nav>
         <ul className="menuItems">
-          <li></li>
           <h1 className="header__title">Joblify</h1>
           <li>
             <a>
@@ -28,13 +27,13 @@ const Header = () => (
 
           <li>
             <a>
-              <NavLink to="/create">Create Job Application</NavLink>
+              <NavLink to="/create">Add Job Application</NavLink>
             </a>
           </li>
           <li>
             <a>
               <NavLink to="/help" activeClassName="is-active">
-                Help Page
+                Help
               </NavLink>
             </a>
           </li>
