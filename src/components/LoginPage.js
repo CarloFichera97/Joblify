@@ -7,47 +7,66 @@ import {
   gitHubAuthProvider,
 } from "../firebase/firebase";
 
-const LoginPage = ({
-  startGoogleLogin,
-  startFacebookLogin,
-  startGithubLogin,
-}) => {
-  return (
-    <div className="box-layout">
-      <div className="box-layout__box">
-        <h1 className="box-layout__title">Joblify</h1>
-        <p className="box-layout__paragraph">
-          It is time to get your Job Applications under control!
-        </p>
+import {
+  FacebookLoginButton,
+  GoogleLoginButton,
+  GithubLoginButton,
+} from "react-social-login-buttons";
+class LoginPage extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      social: true,
+    };
+  }
+  loginWithSocial = () => {
+    if (this.state.social === true) {
+      this.setState(() => ({
+        social: false,
+      }));
+    } else if (this.state.social === false) {
+      this.setState(() => ({
+        social: true,
+      }));
+    }
+  };
 
-        <div className="lbtn lbtn-google">
-          <i onClick={startGoogleLogin} className="logo"></i>
-          <p className="label">
-            <span className="button--Google" onClick={startGoogleLogin}>
-              Login with Google
-            </span>
+  render() {
+    return (
+      <div className="box-layout">
+        <div className="box-layout__box">
+          <h1 className="box-layout__title">Joblify</h1>
+          <p className="box-layout__paragraph">
+            It is time to get your Job Applications under control!
           </p>
-        </div>
-        <div className="lbtn lbtn-facebook">
-          <i onClick={startFacebookLogin} className="logo"></i>
-          <p className="label">
-            <span className="button--Facebook" onClick={startFacebookLogin}>
-              Login with Facebook
-            </span>
+          <button className="lbtn" onClick={this.loginWithSocial}>
+            Login with Social
+          </button>
+          <p>
+            {this.state.social && (
+              <GoogleLoginButton className="lbtn" onClick={startGoogleLogin} />
+            )}
           </p>
-        </div>
-        <div className="lbtn lbtn-github">
-          <i className="logo"></i>
-          <p className="label">
-            <span className="button--Github" onClick={startGithubLogin}>
-              Login with Github
-            </span>
+          <p>
+            {this.state.social === true ? (
+              <FacebookLoginButton
+                className="lbtn"
+                onClick={startFacebookLogin}
+              />
+            ) : (
+              ""
+            )}
+          </p>
+          <p>
+            {this.state.social && (
+              <GithubLoginButton className="lbtn" onClick={startGithubLogin} />
+            )}
           </p>
         </div>
       </div>
-    </div>
-  );
-};
+    );
+  }
+}
 const startGoogleLogin = () => {
   firebase.auth().signInWithPopup(googleAuthProvider);
 };

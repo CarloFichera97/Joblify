@@ -91,9 +91,15 @@ export default class JobForm extends React.Component {
 
   onSubmit = (e) => {
     e.preventDefault();
-    if (!this.state.company || !this.state.role || !this.state.description) {
+    if (
+      !this.state.company ||
+      !this.state.role ||
+      !this.state.description ||
+      !this.state.salary
+    ) {
       this.setState(() => ({
-        error: "Please provide at least Company Name, Role and Description",
+        error:
+          "Please provide at least Company Name, Role and Description and indicative salary",
       }));
     } else {
       this.setState(() => ({ error: "" }));
@@ -116,26 +122,27 @@ export default class JobForm extends React.Component {
     return (
       <div className="jobform-container">
         <p className="error">{this.state.error && this.state.error}</p>
-        <p className="calendar">
-          <SingleDatePicker
-            date={this.state.createdOn}
-            onDateChange={this.onDateChange}
-            focused={this.state.calendarFocused}
-            onFocusChange={this.onFocusChange}
-            numberOfMonths={1}
-            isOutsideRange={(day) => false}
-            noBorder={true}
-            displayFormat={() => moment.localeData().longDateFormat("L")}
-          />
-        </p>
+
         <div>
           <form onSubmit={this.onSubmit}>
-            <div className="form form-companydetails">
+            <div className="chatbox">
               <h1 className="title title-companydetails">Job Details</h1>
+              <p className="calendar">
+                <SingleDatePicker
+                  date={this.state.createdOn}
+                  onDateChange={this.onDateChange}
+                  focused={this.state.calendarFocused}
+                  onFocusChange={this.onFocusChange}
+                  numberOfMonths={1}
+                  isOutsideRange={(day) => false}
+                  noBorder={true}
+                  displayFormat={() => moment.localeData().longDateFormat("L")}
+                />
+              </p>
               <input
                 className="input--jobform"
                 type="text"
-                placeholder="Company Name"
+                placeholder="Company Name *"
                 autoFocus
                 value={this.state.company}
                 onChange={this.onCompanyChange}
@@ -143,21 +150,21 @@ export default class JobForm extends React.Component {
               <input
                 className="input--jobform"
                 type="text"
-                placeholder="Role"
+                placeholder="Role  *"
                 value={this.state.role}
                 onChange={this.onRoleChange}
               />
               <input
                 className="input--jobform"
                 type="text"
-                placeholder="Salary"
+                placeholder="Salary  *"
                 value={this.state.salary}
                 onChange={this.onSalaryChange}
               />
               <input
                 className="input--jobform"
                 type="text"
-                placeholder="Description"
+                placeholder="Description  *"
                 value={this.state.description}
                 onChange={this.onDescriptionChange}
               />
@@ -168,16 +175,16 @@ export default class JobForm extends React.Component {
                 value={this.state.status}
                 onChange={this.onStatusChange}
               />
+              <div className="textarea_box">
+                <textarea
+                  className="textarea"
+                  rows="5"
+                  placeholder="Add a note for your job application"
+                  value={this.state.notes}
+                  onChange={this.onNotesChange}
+                ></textarea>
+              </div>
 
-              <textarea
-                rows="10"
-                placeholder="Add a note for your job application"
-                value={this.state.notes}
-                onChange={this.onNotesChange}
-              ></textarea>
-            </div>
-
-            <div className="jobform-container-recruiter">
               <h1 className="title title-recruiterdetails">
                 Recruiter Details
               </h1>
@@ -204,8 +211,12 @@ export default class JobForm extends React.Component {
                 value={this.state.recruiterPhoneNumber}
                 onChange={this.onNumberChange}
               />
+              <div className="button_box">
+                <button className="button__jobForm" onClick>
+                  Add Job Application
+                </button>
+              </div>
             </div>
-            <button className="button__jobForm">Add Job Application</button>
           </form>
         </div>
       </div>

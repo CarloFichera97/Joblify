@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
-
 .box-layout {
   background: $base-bgcolor;
   background-size: cover;
@@ -25,7 +23,7 @@
   margin-right: 0;
   font-weight: bold;
   font-style: italic;
-  margin-bottom: 10px;
+  margin-bottom: 0px;
   color: lighten($base-color, 50%);
 }
 
@@ -36,119 +34,17 @@
 }
 
 .lbtn {
-  flex-direction: row;
+  border-bottom: 1px solid $base-bgcolor;
   font-size: 12pt;
   font-weight: 1200;
-  display: flex;
-  height: 64px;
-  flex: initial;
+  background: fade-out(white, 0.6);
+  padding: 8px;
+  border-radius: 5px;
+  box-shadow: 0 0 2px #000;
   font: $base-font-family, $base-font-family-fallback, sans-serif;
-  margin: 10px;
-  width: 240px;
-}
-
-.lbtn .logo {
-  width: 64px;
-  flex: initial;
-  display: flex;
-  position: relative;
-}
-
-.lbtn.logo-only {
-  width: 64px;
-}
-
-.lbtn:not(.white) .logo {
-  filter: brightness(0%) invert(100%);
 }
 
 .lbtn:hover {
-  cursor: pointer;
-}
-
-.lbtn .label {
-  text-align: center;
-  flex: 1;
-  margin: 0;
-  align-items: center;
-  justify-content: center;
-  display: flex;
-  border-color: inherit;
-  border-left: 3px solid;
-}
-
-.button--Facebook {
-  display: block;
-  background-image: url("/public/images/facebook.png");
-  color: #ffffff;
-  background-color: #3c5a99;
-  border-color: #516184;
-  border-radius: $login-button-border-radius;
-  padding: $login-button-padding;
-}
-
-.button--Facebook:hover,
-.button--Facebook:active {
-  background-color: lighten(#3c5a99, 4%);
-  transition: 0.2s ease-in-out;
-  font-size: 13pt;
-}
-
-.lbtn.lbtn-facebook .logo {
-  background: url("/public/images/facebook.png");
-}
-
-.lbtn.lbtn-facebook .logo:hover,
-.lbtn.lbtn-facebook .logo:active {
-  transform: scale(1, 1.24);
-  transition: 0.2s ease-in-out;
-}
-
-.button--Github {
-  display: block;
-  color: #ffffff;
-  background-color: #1a1414;
-  border-radius: $login-button-border-radius;
-  padding: $login-button-padding;
-}
-
-.button--Github:hover,
-.button--Github:active {
-  background-color: lighten(#1a1414, 4%);
-  transition: 0.2s ease-in-out;
-  font-size: 13pt;
-}
-
-.lbtn.lbtn-github .logo {
-  background: url("/public/images/github.png");
-}
-
-.lbtn.lbtn-github .logo:hover,
-.lbtn.lbtn-github .logo:active {
-  transform: scale(1, 1.3);
-  transition: 0.2s ease-in-out;
-}
-
-.button--Google {
-  color: #ea4335;
-  background-color: #ffffff;
-  border-radius: $login-button-border-radius;
-  padding: $login-button-padding;
-}
-
-.button--Google:hover,
-.button--Google:active {
-  background-color: darken(#ffffff, 5%);
-  transition: 0.2s ease-in-out;
-  font-size: 13pt;
-}
-
-.lbtn.lbtn-google .logo {
-  background: url("/public/images/google.png");
-}
-
-.lbtn.lbtn-google .logo:hover,
-.lbtn.lbtn-google .logo:active {
-  transform: scale(1, 1.24);
+  background-color: lighten(fade-out(white, 0.8), 5%);
   transition: 0.2s ease-in-out;
 }

@@ -17,7 +17,7 @@ const Header = () => (
               <NavLink
                 to="/dashboard"
                 activeClassName="
-    is-active"
+    active"
                 exact={true}
               >
                 Dashboard
@@ -32,7 +32,7 @@ const Header = () => (
           </li>
           <li>
             <a>
-              <NavLink to="/help" activeClassName="is-active">
+              <NavLink to="/help" activeClassName="active">
                 Help
               </NavLink>
             </a>
