@@ -32,6 +32,7 @@
     "react-dates": "^21.8.0",
     "react-dom": "^16.14.0",
     "react-firebaseui": "^5.0.2",
+    "react-icons": "^4.2.0",
     "react-modal": "^3.14.2",
     "react-redux": "^7.2.4",
     "react-router-dom": "^4.2.2",

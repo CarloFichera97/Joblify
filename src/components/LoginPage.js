@@ -15,7 +15,7 @@ const LoginPage = ({
   return (
     <div className="box-layout">
       <div className="box-layout__box">
-        <h1 className="box-layout__title">Job-Application Tracker</h1>
+        <h1 className="box-layout__title">Joblify</h1>
         <p className="box-layout__paragraph">
           It is time to get your Job Applications under control!
         </p>
@@ -37,7 +37,7 @@ const LoginPage = ({
           </p>
         </div>
         <div className="lbtn lbtn-github">
-          <i onClick={startGithubLogin} className="logo"></i>
+          <i className="logo"></i>
           <p className="label">
             <span className="button--Github" onClick={startGithubLogin}>
               Login with Github

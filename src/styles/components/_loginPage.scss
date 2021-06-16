@@ -1,5 +1,5 @@
 .box-layout {
-  background: #0b0b0a;
+  background: $base-bgcolor;
   background-size: cover;
   display: flex;
   justify-content: center;
@@ -9,32 +9,38 @@
 }
 
 .box-layout__box {
-  background: fade-out(white, 0.3);
-  border-radius: 3px;
+  background: fade-out(white, 0.6);
+  border-radius: 20px;
   text-align: center;
   width: 28.5rem;
   padding: $m-size $m-size $l-size $m-size;
+  box-shadow: 0 0 400px #000;
 }
 
 .box-layout__title {
-  font-size: 22pt;
+  font-size: 30pt;
+  margin-left: 13px;
+  margin-right: 0;
   font-weight: bold;
-  color: black;
+  font-style: italic;
+  margin-bottom: 10px;
+  color: lighten($base-color, 50%);
 }
 
 .box-layout__paragraph {
-  font-size: 12pt;
+  font-size: 12.5pt;
   font-style: italic;
+  color: darken($base-bgcolor, 30%);
 }
 
 .lbtn {
   flex-direction: row;
   font-size: 12pt;
-  font-weight: 750;
+  font-weight: 1200;
   display: flex;
   height: 64px;
   flex: initial;
-  font-family: "나눔바른고딕 Bold", "Roboto", sans-serif;
+  font: $base-font-family, $base-font-family-fallback, sans-serif;
   margin: 10px;
   width: 240px;
 }
@@ -44,21 +50,6 @@
   flex: initial;
   display: flex;
   position: relative;
-  background-color: inherit;
-}
-
-.lbtn .label {
-  text-align: center;
-  flex: 1;
-  align-items: center;
-  justify-content: center;
-  border-left: 2px solid;
-  display: flex;
-  border-color: inherit;
-}
-
-.lbtn.lbtn-flat .label {
-  border-left: none;
 }
 
 .lbtn.logo-only {
@@ -69,13 +60,6 @@
   filter: brightness(0%) invert(100%);
 }
 
-.lbtn .logo {
-  width: 64px;
-  flex: initial;
-  display: flex;
-  position: relative;
-  background-color: inherit;
-}
 .lbtn:hover {
   cursor: pointer;
 }
@@ -88,6 +72,7 @@
   justify-content: center;
   display: flex;
   border-color: inherit;
+  border-left: 3px solid;
 }
 
 .button--Facebook {
@@ -96,12 +81,8 @@
   color: #ffffff;
   background-color: #3c5a99;
   border-color: #516184;
-  border-radius: 8px;
-  padding: 5px 30px 5px 30px;
-  border-top: 1px white solid;
-  border-left: 1px white solid;
-  border-right: 1px #000033 solid;
-  border-bottom: 1px #000033 solid;
+  border-radius: $login-button-border-radius;
+  padding: $login-button-padding;
 }
 
 .button--Facebook:hover,
@@ -125,13 +106,8 @@
   display: block;
   color: #ffffff;
   background-color: #1a1414;
-  border-color: #181516;
-  border-radius: 8px;
-  padding: 5px 30px 5px 30px;
-  border-top: 1px white solid;
-  border-left: 1px white solid;
-  border-right: 1px #000033 solid;
-  border-bottom: 1px #000033 solid;
+  border-radius: $login-button-border-radius;
+  padding: $login-button-padding;
 }
 
 .button--Github:hover,
@@ -152,20 +128,15 @@
 }
 
 .button--Google {
-  padding: 5px 27px 5px 27px;
   color: #ea4335;
   background-color: #ffffff;
-  border-radius: 8px;
-  border-color: #d7d7d7;
-  border-top: 1px white solid;
-  border-left: 1px white solid;
-  border-right: 1px #000033 solid;
-  border-bottom: 1px #000033 solid;
+  border-radius: $login-button-border-radius;
+  padding: $login-button-padding;
 }
 
 .button--Google:hover,
 .button--Google:active {
-  background-color: darken(#ffffff, 10%);
+  background-color: darken(#ffffff, 5%);
   transition: 0.2s ease-in-out;
   font-size: 13pt;
 }
