@@ -1,75 +1,39 @@
-.header__icon {
-  color: $base-color;
-  font-size: 55px;
-  display: flex;
-  margin-right: 0px;
-  margin-top: 17px;
-  margin-left: 3%;
-  padding: 0;
-}
-.header__container {
-  background: darken($base-bgcolor, 5%);
-  padding: 0;
-  display: flex;
-  width: 100%;
-  height: 90px;
-  margin-bottom: 0;
+.active {
+  border-bottom: 1px solid rgb(255, 255, 255);
 }
 
-h1 {
-  font: $base-font-family, $base-font-family-fallback;
-  margin-left: -2%;
-  font-size: 60px;
-  font-style: italic;
-  color: #ffffff;
-  margin-top: -8px;
-  padding: 0;
+.title_container_header {
+  display: flex;
 }
-
+.nav_inactive_menu,
 a {
-  cursor: pointer;
+  font: $base-font-family, $base-font-family-fallback;
+  font-style: italic;
   text-decoration: none;
-
-  border-bottom: 1px transparent;
+  color: $header-writing-color;
+  font-size: 24px;
+  font-weight: 400;
+  margin-left: 8px;
+  margin-right: 8px;
   &:hover {
     border-bottom: 1px solid;
     color: rgb(255, 255, 255);
   }
 }
 
-.active {
-  border-bottom: 1px solid rgb(255, 255, 255);
+a {
+  margin-right: 50px;
+  cursor: pointer;
+  margin-left: 24px;
+  @media (min-width: 2000px) {
+    margin-right: 80px;
+  }
 }
-a:hover {
+
+.header_icon {
+  margin-right: 0px;
   color: white;
-}
-
-.menuItems {
-  list-style: none;
-  display: flex;
-  margin-bottom: 10px;
-  width: 50%;
-  margin-right: 10%;
-  white-space: nowrap;
-  li {
-    margin: 15%;
-    margin-top: 14px;
-    margin-bottom: 10px;
-    margin-right: 0;
-    a {
-      font: $base-font-family, $base-font-family-fallback;
-      font-style: italic;
-      text-decoration: none;
-      color: $header-writing-color;
-      font-size: 26px;
-      font-weight: 400;
-      position: relative;
-    }
-  }
-}
-
-@media (max-width: 750px) {
-  .header__icon {
-    transform: scale(0.5);
-  }
+  font-size: 40px;
+  margin-top: 36px;
+  margin-left: 30px;
 }

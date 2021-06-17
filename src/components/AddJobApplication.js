@@ -4,14 +4,33 @@ import { startAddJobApplication } from "./../actions/jobApplications";
 import JobForm from "./JobForm";
 
 export class AddJobApplication extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      message: "",
+    };
+  }
+
   onSubmit = (jobApplication) => {
     this.props.startAddJobApplication(jobApplication);
     this.props.history.push("/dashboard");
   };
+
+  containerMessageRendering = (message) => {
+    this.setState(() => {
+      message: "coa";
+    });
+  };
+
   render() {
     return (
       <div>
-        <JobForm onSubmit={this.onSubmit} />
+        <div className="content-container">
+          <JobForm
+            onSubmit={this.onSubmit}
+            containerMessageRendering={this.containerMessageRendering}
+          />
+        </div>
       </div>
     );
   }

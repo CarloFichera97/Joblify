@@ -15,10 +15,17 @@ export class EditJobApplication extends React.Component {
   render() {
     return (
       <div>
-        <JobForm
-          jobApplication={this.props.jobApplication}
-          onSubmit={this.onSubmit}
-        />
+        <div className="page-header">
+          <div className="content-container">
+            <h1 className="page-header__title">Edit Job Application</h1>
+          </div>
+        </div>
+        <div className="content-container">
+          <JobForm
+            jobApplication={this.props.jobApplication}
+            onSubmit={this.onSubmit}
+          />
+        </div>
       </div>
     );
   }
