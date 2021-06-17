@@ -154,15 +154,6 @@ export default class JobForm extends React.Component {
             onChange={this.onRoleChange}
           />
 
-          <SingleDatePicker
-            date={this.state.createdOn}
-            onDateChange={this.onDateChange}
-            focused={this.state.calendarFocused}
-            onFocusChange={this.onFocusChange}
-            numberOfMonths={1}
-            isOutsideRange={(day) => false}
-            block
-          />
           <input
             className="input--jobform"
             type="text"
@@ -177,6 +168,18 @@ export default class JobForm extends React.Component {
             value={this.state.description}
             onChange={this.onDescriptionChange}
           />
+          <b>
+            <SingleDatePicker
+              date={this.state.createdOn}
+              onDateChange={this.onDateChange}
+              focused={this.state.calendarFocused}
+              onFocusChange={this.onFocusChange}
+              numberOfMonths={1}
+              isOutsideRange={(day) => false}
+              noBorder={true}
+            />
+          </b>
+
           <input
             className="input--jobform"
             type="text"

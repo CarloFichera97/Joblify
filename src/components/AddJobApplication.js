@@ -16,20 +16,11 @@ export class AddJobApplication extends React.Component {
     this.props.history.push("/dashboard");
   };
 
-  containerMessageRendering = (message) => {
-    this.setState(() => {
-      message: "coa";
-    });
-  };
-
   render() {
     return (
       <div>
         <div className="content-container">
-          <JobForm
-            onSubmit={this.onSubmit}
-            containerMessageRendering={this.containerMessageRendering}
-          />
+          <JobForm onSubmit={this.onSubmit} />
         </div>
       </div>
     );

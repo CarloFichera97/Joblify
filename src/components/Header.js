@@ -11,7 +11,6 @@ const NavigationBar = styled.nav`
   padding: 0 20px;
   min-height: 9vh;
   background: #354152;
-  margin-bottom: 20px;
 `;
 
 const Title = styled.h1`
@@ -74,7 +73,7 @@ const OverlayMenu = styled.ul`
   list-style: none;
   position: absolute;
   left: 50%;
-  top: 45%;
+  top: 50%;
   transform: translate(-50%, -50%);
 
   li {
