@@ -1,31 +1,42 @@
 import React from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
-import moment from "moment";
 import getFilteredJobApplications from "./../selectors/jobApplications";
 import numeral from "numeral";
 import "numeral/locales/en-gb";
 
 export const JobApplicationList = (props) => {
   return (
-    <div className="dashboard__container">
+    <div className="content-container">
       <p className="numeral_locale">{numeral.locale("en-gb")}</p>
+
       <h2>
         There are a total of {props.jobApplications.length} Job Applications
         listed for the filters selected
       </h2>
-      {props.jobApplications.map((jobApplication) => (
-        <div key={jobApplication.id}>
-          <Link to={`/view/${jobApplication.id}`}>
-            <h3>Company: {jobApplication.company}</h3>
-          </Link>
-          <p> Role: {jobApplication.role} </p>
-          <p>
-            Salary: {numeral(jobApplication.salary / 100).format("$00,00.00")}{" "}
-          </p>
-          <p>{moment(jobApplication.createdOn).format("MMMM Do, YYYY")}</p>
+
+      <div className="list-body">
+        <div className="list-header">
+          <div className="upper_message_company">Company & Role</div>
+          <div className="upper_message_salary">Salary</div>
         </div>
-      ))}
+        {props.jobApplications.map((jobApplication) => (
+          <div key={jobApplication.id}>
+            <Link className="list-item" to={`/view/${jobApplication.id}`}>
+              <div>
+                <p className="list-item__title">{jobApplication.company}</p>
+                <span className="list-item__sub-title">
+                  {" "}
+                  {jobApplication.role}{" "}
+                </span>
+              </div>
+              <span className="list-item__data">
+                {numeral(jobApplication.salary / 100).format("$00,00.00")}{" "}
+              </span>
+            </Link>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

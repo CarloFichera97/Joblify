@@ -14,6 +14,7 @@ const NavigationBar = styled.nav`
 `;
 
 const Title = styled.h1`
+  margin-top: 30px;
   font-size: 46px;
   color: white;
   font-style: italic;
@@ -124,7 +125,9 @@ const Header = () => {
           </li>
 
           <li>
-            <a onClick={startLogout}>Logout</a>
+            <a className="logout_button" onClick={startLogout}>
+              Logout
+            </a>
           </li>
         </HorizontalMenu>
         <ToggleIcon onClick={() => toggleNav(!toggle)}>
@@ -170,7 +173,9 @@ const Header = () => {
           </li>
 
           <li>
-            <a onClick={startLogout}>Logout</a>
+            <a className="logout_button" onClick={startLogout}>
+              Logout
+            </a>
           </li>
         </OverlayMenu>
       </Overlay>

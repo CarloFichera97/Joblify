@@ -24,7 +24,7 @@ const AppRouter = () => (
         <PrivateRoute path="/create" component={AddJobApplication} />
         <PrivateRoute path="/edit/:id" component={EditJobApplication} />
         <PrivateRoute path="/view/:id" component={ViewJobApplication} />
-        <Route path="/help" component={HelpPage} />
+        <PrivateRoute path="/help" component={HelpPage} />
         <Route component={NotFoundPage} />
       </Switch>
     </div>

@@ -7,7 +7,6 @@
 }
 .nav_inactive_menu,
 a {
-  font: $base-font-family, $base-font-family-fallback;
   font-style: italic;
   text-decoration: none;
   color: $header-writing-color;
@@ -16,9 +15,13 @@ a {
   margin-left: 8px;
   margin-right: 8px;
   &:hover {
-    border-bottom: 1px solid;
-    color: rgb(255, 255, 255);
+    color: #797a9e;
   }
+}
+
+.nav_inactive_menu:hover,
+.logout_button:hover {
+  border-bottom: 1px solid;
 }
 
 a {

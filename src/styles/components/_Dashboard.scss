@@ -1,12 +1,86 @@
-.dashboard__container {
-  width: 100%;
-  display: grid;
-  justify-content: center;
-  align-items: center;
-}
-
 .numeral_locale {
   color: white;
   margin: 0;
   margin-top: -30px;
+}
+.list-header {
+  max-width: 80rem;
+  background: darken($off-white, 3%);
+  border: 1px solid darken($off-white, 15%);
+  color: darken($grey, 20%);
+  display: flex;
+  justify-content: space-between;
+  padding: $s-size $m-size;
+  margin-left: 24px;
+  margin-right: 50px;
+}
+
+.list-body {
+  margin-bottom: $m-size;
+  @media (min-width: $desktop-breakpoint) {
+    margin-bottom: $l-size;
+  }
+}
+
+.list-item {
+  border: 1px solid darken($off-white, 7%);
+  border-top: none;
+  color: darken(#797a9e, 10%);
+  display: flex;
+  flex-direction: column;
+  padding: $s-size;
+  text-decoration: none;
+  transition: background 0.3s ease;
+  &:hover {
+    background: $off-white;
+  }
+  @media (min-width: $desktop-breakpoint) {
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: $m-size;
+  }
+}
+
+.list-item--message {
+  align-items: center;
+  color: $grey;
+  font-size: 24px;
+  justify-content: center;
+  padding: $m-size;
+  &:hover {
+    background: none;
+  }
+}
+
+.list-item__title {
+  margin: 0;
+  font-size: 30px;
+  word-break: break-all;
+  &::hover {
+    color: darken(#797a9e, 5%);
+  }
+}
+
+.list-item__sub-title {
+  color: $grey;
+
+  font-size: 18px;
+}
+
+.list-item__data {
+  margin: $s-size 0 0 0;
+
+  font-size: 22px;
+  @media (min-width: $desktop-breakpoint) {
+    margin: 0;
+    padding-left: $s-size;
+  }
+}
+
+.upper_message_salary,
+.upper_message_company {
+  font-size: 26px;
+  font-style: italic;
+  padding: 10px 0px;
 }

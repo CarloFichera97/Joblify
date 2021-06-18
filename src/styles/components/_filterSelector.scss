@@ -1,0 +1,41 @@
+.input-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: $m-size;
+  @media (min-width: $desktop-breakpoint) {
+    flex-direction: row;
+    margin-bottom: $l-size;
+  }
+}
+
+.input-group__item {
+  margin-bottom: $s-size;
+  @media (min-width: $desktop-breakpoint) {
+    margin: 0 $s-size 0 0;
+  }
+}
+
+.text-input {
+  border: 1px solid #cacccd;
+  height: 50px;
+  font-size: $font-size-large;
+  font-weight: 300;
+}
+
+.select {
+  @extend .text-input;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.textarea {
+  @extend .text-input;
+  height: 10rem;
+}
+.content-container-filters {
+  margin: 20px auto;
+  padding: 0 $m-size;
+  max-width: 95rem;
+}
+//.DateRangePickerInput {
+//}
