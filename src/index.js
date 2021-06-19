@@ -47,7 +47,7 @@ const renderApp = () => {
     hasRendered = true;
   }
 };
-//Callback runs when the auth state changes
+
 firebase.auth().onAuthStateChanged((user) => {
   if (user) {
     store.dispatch(login(user.uid));
@@ -65,5 +65,5 @@ firebase.auth().onAuthStateChanged((user) => {
     history.push("/");
   }
 });
-//Loading a message until we get the appropriate data from firebase
-ReactDOM.render(<p>Loading....</p>, document.getElementById("app"));
+
+//ReactDOM.render(<p>Loading....</p>, document.getElementById("app"));

@@ -1,6 +1,40 @@
-import React from "react";
+import React, { Component } from "react";
 import { connect } from "react-redux";
 import { DateRangePicker } from "react-dates";
+import Select from "react-select";
+
+const customStyles = {
+  option: (provided, state) => ({
+    ...provided,
+  }),
+  control: () => ({
+    // none of react-select's styles are passed to <Control />
+    width: 80,
+    borderBottom: "1px solid #797a9e",
+    padding: "3px",
+    padding: "10px 10px 0px 0px",
+    margin: "2px",
+  }),
+
+  dropdownIndicator: () => ({
+    display: "none",
+  }),
+
+  singleValue: (provided, state) => {
+    return { ...provided };
+  },
+};
+
+const sortByOptions = [
+  { value: "date", label: "Date" },
+  { value: "salary", label: "Salary" },
+];
+
+const searchByOptions = [
+  { value: "company", label: "Company" },
+  { value: "role", label: "Role" },
+];
+
 import {
   sortByDate,
   sortBySalary,
@@ -15,11 +49,33 @@ import {
 class FilterSelector extends React.Component {
   state = {
     calendarFocused: null,
+    selectedSortByOption: null,
+    selectedSearchByOption: null,
   };
 
   onDatesChange = ({ startDate, endDate }) => {
     this.props.dispatch(setStartDate(startDate));
     this.props.dispatch(setEndDate(endDate));
+  };
+
+  handleSelectChangeSortBy = (selectedSortByOption) => {
+    this.setState({ selectedSortByOption }, () => {
+      if (this.state.selectedSortByOption.label === "Date") {
+        this.props.dispatch(sortByDate());
+      } else if (this.state.selectedSortByOption.label === "Salary") {
+        this.props.dispatch(sortBySalary());
+      }
+    });
+  };
+
+  handleSelectChangeSearchBy = (selectedSearchByOption) => {
+    this.setState({ selectedSearchByOption }, () => {
+      if (this.state.selectedSearchByOption.label === "Company") {
+        this.props.dispatch(searchByCompany());
+      } else if (this.state.selectedSearchByOption.label === "Salary") {
+        this.props.dispatch(searchByRole());
+      }
+    });
   };
 
   onFocusChange = (calendarFocused) => {
@@ -32,8 +88,48 @@ class FilterSelector extends React.Component {
       <div className="content-container-filters">
         <div className="input-group">
           <div className="input-group__item">
+            <p className="select_option"> Search By:</p>
+            <Select
+              isSearchable={false}
+              styles={customStyles}
+              options={searchByOptions}
+              value={this.state.selectedSearchByOption}
+              onChange={this.handleSelectChangeSearchBy}
+              theme={(theme) => ({
+                ...theme,
+                colors: {
+                  ...theme.colors,
+                  text: "#797a9e",
+                  primary25: "#b7b8cb",
+                  primary: "#797a9e",
+                },
+              })}
+            />
+          </div>
+          <div className="input-group__item">
+            <p className="select_option"> Sort By:</p>
+
+            <Select
+              isSearchable={false}
+              styles={customStyles}
+              options={sortByOptions}
+              value={this.state.selectedSortByOption}
+              onChange={this.handleSelectChangeSortBy}
+              theme={(theme) => ({
+                ...theme,
+                colors: {
+                  ...theme.colors,
+                  text: "#797a9e",
+                  primary25: "#b7b8cb",
+                  primary: "#797a9e",
+                },
+              })}
+            />
+          </div>
+          <div className="input-group__item">
             <input
-              className="text-input"
+              placeholder="Insert Filter"
+              className="dashboard_input"
               type="text"
               value={
                 this.props.filters.searchBy === "company"
@@ -49,42 +145,7 @@ class FilterSelector extends React.Component {
               }}
             ></input>
           </div>
-          <div className="input-group__item">
-            <div className="select2 animated zoomIn">
-              Sort By
-              <select
-                className="select"
-                value={this.props.filters.sortBy}
-                onChange={(e) => {
-                  if (e.target.value === "date") {
-                    this.props.dispatch(sortByDate());
-                  } else if (e.target.value === "salary") {
-                    this.props.dispatch(sortBySalary());
-                  }
-                }}
-              >
-                <option value="date">Date</option>
-                <option value="salary">Salary</option>
-              </select>
-            </div>
-          </div>
-          <div className="input-group__item">
-            Search By
-            <select
-              className="select"
-              value={this.props.filters.searchBy}
-              onChange={(e) => {
-                if (e.target.value === "company") {
-                  this.props.dispatch(searchByCompany());
-                } else if (e.target.value === "role") {
-                  this.props.dispatch(searchByRole());
-                }
-              }}
-            >
-              <option value="company">Company</option>
-              <option value="role">Role</option>
-            </select>
-          </div>
+
           <div className="input-group__item">
             <DateRangePicker
               startDate={this.props.filters.startDate}
@@ -95,6 +156,7 @@ class FilterSelector extends React.Component {
               showClearDates={true}
               numberOfMonths={1}
               isOutsideRange={() => false}
+              noBorder={true}
             />
           </div>
         </div>

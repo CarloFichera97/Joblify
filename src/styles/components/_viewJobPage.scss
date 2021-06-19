@@ -1,0 +1,33 @@
+.content-container__view {
+  margin: 0 auto;
+  padding: 9rem $m-size;
+  max-width: 90rem;
+  margin-top: -40px;
+}
+
+.upper_message_company_view {
+  font-size: 30px;
+  font-style: italic;
+  padding: 10px 0px;
+  color: darken(#797a9e, 20%);
+}
+
+.upper_message_date_view {
+  font-size: 20px;
+  font-style: italic;
+  margin-top: 17px;
+  color: darken(#797a9e, 20%);
+}
+
+.content-container__view_jobDetails {
+  margin: 0 auto;
+  padding: 9rem $m-size;
+  margin-left: 24px;
+  margin-right: 50px;
+  border: 1px solid darken($off-white, 7%);
+  border-top: none;
+  color: darken(#797a9e, 10%);
+
+  padding: $s-size;
+  text-decoration: none;
+}

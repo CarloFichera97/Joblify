@@ -7,7 +7,9 @@ import { startRemoveJobApplication } from "./../actions/jobApplications";
 
 export class ViewJobApplication extends React.Component {
   onClickRemove = () => {
-    this.props.dispatch(startRemoveJobApplication(this.props.jobApplication.id));
+    this.props.dispatch(
+      startRemoveJobApplication(this.props.jobApplication.id)
+    );
     this.props.history.push("/dashboard");
   };
 
@@ -17,51 +19,78 @@ export class ViewJobApplication extends React.Component {
 
   render() {
     return (
-      <div>
-        <h2>Company Name: {this.props.jobApplication.company}</h2>
-        <h3>Role: {this.props.jobApplication.role} </h3>
-        <p>
-          Salary:{" "}
-          {numeral(this.props.jobApplication.salary / 100).format("$00,00.00")}{" "}
-        </p>
-        <p>
-          Created:{" "}
-          {moment(this.props.jobApplication.createdOn).format("MMMM Do, YYYY")}
-        </p>
-        {!this.props.jobApplication.description ? (
-          <p>Description: None</p>
-        ) : (
-          <p>{this.props.jobApplication.description}</p>
-        )}
-        {!this.props.jobApplication.notes ? (
-          <p>Notes: None</p>
-        ) : (
-          <p>{this.props.jobApplication.notes}</p>
-        )}
-        {!this.props.jobApplication.status ? (
-          <p>Status: Undefined</p>
-        ) : (
-          <p>{this.props.jobApplication.status}</p>
-        )}
+      <div className="content-container__view">
+        <div className="list-header">
+          <div className="upper_message_company_view">
+            {this.props.jobApplication.company}
+          </div>
+          <div className="upper_message_date_view">
+            {moment(this.props.jobApplication.createdOn).format(
+              "MMMM Do, YYYY"
+            )}
+          </div>
+        </div>
 
-        <h3> Recruiter Details</h3>
-        {!this.props.jobApplication.recruiterFullName ? (
-          <p>Full Name: Undefined</p>
-        ) : (
-          <p>{this.props.jobApplication.recruiterFullName}</p>
-        )}
+        <div className="content-container__view_jobDetails">
+          <div>
+            <p className="list-item__title">
+              Role: {this.props.jobApplication.role}
+            </p>
+            <p className="list-item__title">
+              {" "}
+              {!this.props.jobApplication.status ? (
+                <p>Status: Undefined</p>
+              ) : (
+                <p>Status: {this.props.jobApplication.status}</p>
+              )}
+            </p>
+            <p className="list-item__sub-title">
+              Salary:{" "}
+              {numeral(this.props.jobApplication.salary / 100).format(
+                "$00,00.00"
+              )}
+            </p>
+          </div>
+          <span className="list-item__data">
+            {!this.props.jobApplication.notes ? (
+              <p>Notes: None</p>
+            ) : (
+              <p>{this.props.jobApplication.notes}</p>
+            )}
+          </span>
+        </div>
 
-        {!this.props.jobApplication.recruiterEmail ? (
-          <p>Email: Undefined</p>
-        ) : (
-          <p>{this.props.jobApplication.recruiterEmail}</p>
-        )}
+        <div className="content-container__view">
+          <div className="list-header">
+            <div className="upper_message_company_view">Recruiter Info</div>
+          </div>
 
-        {!this.props.jobApplication.recruiterPhoneNumber ? (
-          <p>Number: Undefined</p>
-        ) : (
-          <p>{this.props.jobApplication.recruiterPhoneNumber}</p>
-        )}
+          <div className="content-container__view_jobDetails">
+            <div>
+              <p className="list-item__title">
+                {!this.props.jobApplication.recruiterFullName ? (
+                  <p>Full Name: Undefined</p>
+                ) : (
+                  <p>{this.props.jobApplication.recruiterFullName}</p>
+                )}
+              </p>
+              <p className="list-item__title">
+                {!this.props.jobApplication.recruiterEmail ? (
+                  <p>Email: Undefined</p>
+                ) : (
+                  <p>{this.props.jobApplication.recruiterEmail}</p>
+                )}
+              </p>
+              <p className="list-item__sub-title">
+                {!this.props.jobApplication.recruiterPhoneNumber ? (
+                  <p>Number: Undefined</p>
+                ) : (
+                  <p>{this.props.jobApplication.recruiterPhoneNumber}</p>
+                )}
+              </p>
+            </div>
+          </div>
+        </div>
 
         <button onClick={this.onClickRemove}> Remove Job Application </button>
         <button onClick={this.onClickEdit}> Edit Job Application </button>
