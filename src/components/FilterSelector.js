@@ -14,6 +14,7 @@ const customStyles = {
     padding: "3px",
     padding: "10px 10px 0px 0px",
     margin: "2px",
+    zIndex: "-1",
   }),
 
   dropdownIndicator: () => ({
@@ -89,42 +90,45 @@ class FilterSelector extends React.Component {
         <div className="input-group">
           <div className="input-group__item">
             <p className="select_option"> Search By:</p>
-            <Select
-              isSearchable={false}
-              styles={customStyles}
-              options={searchByOptions}
-              value={this.state.selectedSearchByOption}
-              onChange={this.handleSelectChangeSearchBy}
-              theme={(theme) => ({
-                ...theme,
-                colors: {
-                  ...theme.colors,
-                  text: "#797a9e",
-                  primary25: "#b7b8cb",
-                  primary: "#797a9e",
-                },
-              })}
-            />
+            <div className="select_container">
+              <Select
+                isSearchable={false}
+                styles={customStyles}
+                options={searchByOptions}
+                value={this.state.selectedSearchByOption}
+                onChange={this.handleSelectChangeSearchBy}
+                theme={(theme) => ({
+                  ...theme,
+                  colors: {
+                    ...theme.colors,
+                    text: "#797a9e",
+                    primary25: "#b7b8cb",
+                    primary: "#797a9e",
+                  },
+                })}
+              />
+            </div>
           </div>
           <div className="input-group__item">
             <p className="select_option"> Sort By:</p>
-
-            <Select
-              isSearchable={false}
-              styles={customStyles}
-              options={sortByOptions}
-              value={this.state.selectedSortByOption}
-              onChange={this.handleSelectChangeSortBy}
-              theme={(theme) => ({
-                ...theme,
-                colors: {
-                  ...theme.colors,
-                  text: "#797a9e",
-                  primary25: "#b7b8cb",
-                  primary: "#797a9e",
-                },
-              })}
-            />
+            <div className="select_container">
+              <Select
+                isSearchable={false}
+                styles={customStyles}
+                options={sortByOptions}
+                value={this.state.selectedSortByOption}
+                onChange={this.handleSelectChangeSortBy}
+                theme={(theme) => ({
+                  ...theme,
+                  colors: {
+                    ...theme.colors,
+                    text: "#797a9e",
+                    primary25: "#b7b8cb",
+                    primary: "#797a9e",
+                  },
+                })}
+              />
+            </div>
           </div>
           <div className="input-group__item">
             <input
@@ -147,17 +151,19 @@ class FilterSelector extends React.Component {
           </div>
 
           <div className="input-group__item">
-            <DateRangePicker
-              startDate={this.props.filters.startDate}
-              endDate={this.props.filters.endDate}
-              onDatesChange={this.onDatesChange}
-              focusedInput={this.state.calendarFocused}
-              onFocusChange={this.onFocusChange}
-              showClearDates={true}
-              numberOfMonths={1}
-              isOutsideRange={() => false}
-              noBorder={true}
-            />
+            <div className="select_container">
+              <DateRangePicker
+                startDate={this.props.filters.startDate}
+                endDate={this.props.filters.endDate}
+                onDatesChange={this.onDatesChange}
+                focusedInput={this.state.calendarFocused}
+                onFocusChange={this.onFocusChange}
+                showClearDates={true}
+                numberOfMonths={1}
+                isOutsideRange={() => false}
+                noBorder={true}
+              />
+            </div>
           </div>
         </div>
       </div>

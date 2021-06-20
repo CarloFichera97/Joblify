@@ -41,7 +41,7 @@ export default class JobForm extends React.Component {
   };
   onSalaryChange = (e) => {
     const salary = e.target.value;
-    if (!salary || salary.match(/^\d{1,}(\.\d{0,2})?$/)) {
+    if (!salary || salary.match(/^\d{1,7}(\.\d{0,2})?$/)) {
       this.setState(() => ({ salary }));
     }
   };
@@ -168,16 +168,19 @@ export default class JobForm extends React.Component {
             value={this.state.description}
             onChange={this.onDescriptionChange}
           />
+
           <b>
-            <SingleDatePicker
-              date={this.state.createdOn}
-              onDateChange={this.onDateChange}
-              focused={this.state.calendarFocused}
-              onFocusChange={this.onFocusChange}
-              numberOfMonths={1}
-              isOutsideRange={(day) => false}
-              noBorder={true}
-            />
+            <div className="select_container">
+              <SingleDatePicker
+                date={this.state.createdOn}
+                onDateChange={this.onDateChange}
+                focused={this.state.calendarFocused}
+                onFocusChange={this.onFocusChange}
+                numberOfMonths={1}
+                isOutsideRange={(day) => false}
+                noBorder={true}
+              />
+            </div>
           </b>
 
           <input

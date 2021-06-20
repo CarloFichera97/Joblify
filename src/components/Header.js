@@ -76,7 +76,6 @@ const OverlayMenu = styled.ul`
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-
   li {
     opacity: ${(props) => (props.open ? 0.5 : 0)};
     font-size: 25px;
@@ -130,7 +129,27 @@ const Header = () => {
             </a>
           </li>
         </HorizontalMenu>
-        <ToggleIcon onClick={() => toggleNav(!toggle)}>
+        <ToggleIcon
+          onClick={() => {
+            let element = document.querySelectorAll(".select_container");
+            toggleNav(!toggle);
+            if (
+              document
+                .querySelector(".select_container")
+                .classList.contains("send_to_back")
+            ) {
+              setTimeout(() => {
+                element.forEach((element) => {
+                  element.classList.remove("send_to_back");
+                });
+              }, 200);
+            } else {
+              element.forEach((element) => {
+                element.classList.add("send_to_back");
+              });
+            }
+          }}
+        >
           <LineHorizontalButton open={toggle} />
           <LineHorizontalButton open={toggle} />
           <LineHorizontalButton open={toggle} />
