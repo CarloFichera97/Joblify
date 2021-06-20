@@ -18,11 +18,6 @@ export const setRoleName = (role = "") => ({
   role,
 });
 
-export const setRole = (role = "") => ({
-  type: "SET_ROLE",
-  role,
-});
-
 export const sortBySalary = () => ({
   type: "SORT_BY_SALARY",
 });

@@ -73,8 +73,11 @@ class FilterSelector extends React.Component {
     this.setState({ selectedSearchByOption }, () => {
       if (this.state.selectedSearchByOption.label === "Company") {
         this.props.dispatch(searchByCompany());
-      } else if (this.state.selectedSearchByOption.label === "Salary") {
+      } else if (this.state.selectedSearchByOption.label === "Role") {
+        console.log("I am here");
+        console.log(this.props.filters.searchBy);
         this.props.dispatch(searchByRole());
+        setTimeout(() => console.log(this.props.filters.searchBy), 1000);
       }
     });
   };

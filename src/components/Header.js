@@ -142,11 +142,13 @@ const Header = () => {
                 element.forEach((element) => {
                   element.classList.remove("send_to_back");
                 });
-              }, 200);
+              }, 350);
             } else {
-              element.forEach((element) => {
-                element.classList.add("send_to_back");
-              });
+              setTimeout(() => {
+                element.forEach((element) => {
+                  element.classList.add("send_to_back");
+                });
+              }, 100);
             }
           }}
         >

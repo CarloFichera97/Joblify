@@ -18,8 +18,6 @@ const filtersReducer = (state = filtersReducerDefaultState, action) => {
       return { ...state, company: action.company };
     case "SET_ROLE_NAME":
       return { ...state, role: action.role };
-    case "SET_ROLE":
-      return { ...state, role: action.role };
     case "SORT_BY_SALARY":
       return { ...state, sortBy: "salary" };
     case "SORT_BY_DATE":
