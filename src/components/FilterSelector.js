@@ -10,11 +10,14 @@ const customStyles = {
   control: () => ({
     // none of react-select's styles are passed to <Control />
     width: 80,
-    borderBottom: "1px solid #797a9e",
+
     padding: "3px",
-    padding: "10px 10px 0px 0px",
+
     margin: "2px",
-    zIndex: "-1",
+    marginTop: "15px",
+
+    marginBottom: "-10px",
+    fontSize: "20px",
   }),
 
   dropdownIndicator: () => ({
@@ -93,7 +96,7 @@ class FilterSelector extends React.Component {
         <div className="input-group">
           <div className="input-group__item">
             <p className="select_option"> Search By:</p>
-            <div className="select_container">
+            <div id="select_2" className="select_container">
               <Select
                 isSearchable={false}
                 styles={customStyles}
@@ -107,6 +110,7 @@ class FilterSelector extends React.Component {
                     text: "#797a9e",
                     primary25: "#b7b8cb",
                     primary: "#797a9e",
+                    neutral150: "pink",
                   },
                 })}
               />
@@ -114,7 +118,7 @@ class FilterSelector extends React.Component {
           </div>
           <div className="input-group__item">
             <p className="select_option"> Sort By:</p>
-            <div className="select_container">
+            <div id="select_1" className="select_container">
               <Select
                 isSearchable={false}
                 styles={customStyles}

@@ -7,7 +7,6 @@ import "./styles/style.scss";
 import AppRouter, { history } from "./routes/AppRoutes";
 import configureStore from "./store/configureStore";
 import "react-dates/initialize";
-import "react-dates/lib/css/_datepicker.css";
 import "./firebase/firebase";
 import { firebase } from "./firebase/firebase";
 
@@ -66,4 +65,4 @@ firebase.auth().onAuthStateChanged((user) => {
   }
 });
 
-//ReactDOM.render(<p>Loading....</p>, document.getElementById("app"));
+ReactDOM.render(<p>Loading....</p>, document.getElementById("app"));
