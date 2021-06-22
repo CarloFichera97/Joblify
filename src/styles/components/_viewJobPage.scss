@@ -5,29 +5,78 @@
   margin-top: -40px;
 }
 
-.upper_message_company_view {
-  font-size: 30px;
-  font-style: italic;
-  padding: 10px 0px;
-  color: darken(#797a9e, 20%);
+.view-item__title {
+  display: grid;
+  justify-content: first baseline;
 }
 
-.upper_message_date_view {
-  font-size: 20px;
+.view-item__title {
+  font-size: 24px;
   font-style: italic;
-  margin-top: 17px;
-  color: darken(#797a9e, 20%);
 }
 
-.content-container__view_jobDetails {
-  margin: 0 auto;
-  padding: 9rem $m-size;
-  margin-left: 24px;
-  margin-right: 50px;
-  border: 1px solid darken($off-white, 7%);
-  border-top: none;
-  color: darken(#797a9e, 10%);
+.view_jobapp_button {
+  margin-top: 20px;
+}
+.table_titles {
+  font-size: 22px;
+}
 
-  padding: $s-size;
-  text-decoration: none;
+.table_values {
+  font-size: 22px;
+  color: #444444;
+  font-style: italic;
+  word-break: break-all;
+}
+
+.table_title {
+  font-size: 36px;
+  margin-top: 20px;
+  color: #444444;
+  word-break: break-all;
+  position: relative;
+  z-index: 200;
+}
+
+.table_table {
+  margin-top: -30px;
+  position: relative;
+  z-index: 140;
+  width: 10%;
+}
+
+.button__view {
+  display: inline;
+  text-align: justify;
+  margin-right: 10px;
+  border: 0;
+  outline: 0;
+  color: white;
+  margin-top: 15px;
+  font-size: 18px;
+  font-weight: 300;
+  font-style: italic;
+  letter-spacing: 1.2px;
+  padding: 7px;
+  background: linear-gradient(45deg, $blue, $purple);
+}
+
+.button__view:hover {
+  transform: scale(1, 1.1);
+  transition: 0.1s ease-in-out;
+}
+
+.card_notes {
+  padding: 14px;
+  padding: 0px;
+}
+
+.table_title_card_note {
+  margin-bottom: 10px;
+  font-size: 36px;
+  margin-top: 20px;
+  color: #444444;
+  word-break: break-all;
+  position: relative;
+  z-index: 200;
 }
