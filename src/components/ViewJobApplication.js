@@ -4,11 +4,27 @@ import moment from "moment";
 import numeral from "numeral";
 import DataTable from "react-data-table-component";
 import Card from "@material-ui/core/Card";
+import Modal from "react-modal";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 import { startRemoveJobApplication } from "./../actions/jobApplications";
 
 export class ViewJobApplication extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      showModal: false,
+    };
+  }
+
+  handleOpenModal = () => {
+    this.setState({ showModal: true });
+  };
+
+  handleCloseModal = () => {
+    this.setState({ showModal: false });
+  };
+
   onClickRemove = () => {
     this.props.dispatch(
       startRemoveJobApplication(this.props.jobApplication.id)
@@ -166,7 +182,7 @@ export class ViewJobApplication extends React.Component {
             </Card>
           </TabPanel>
         </Tabs>
-        <button className="button__view" onClick={this.onClickRemove}>
+        <button className="button__view" onClick={this.handleOpenModal}>
           {" "}
           Remove Job Application{" "}
         </button>
@@ -174,6 +190,27 @@ export class ViewJobApplication extends React.Component {
           {" "}
           Edit Job Application{" "}
         </button>
+
+        <Modal
+          isOpen={this.state.showModal}
+          className="modal"
+          ariaHideApp={false}
+        >
+          <div className="modal_text">
+            Do you want to remove this Job Application?
+          </div>
+          <button className="button__view_modal" onClick={this.onClickRemove}>
+            {" "}
+            Yes
+          </button>
+          <button
+            className="button__view_modal"
+            onClick={this.handleCloseModal}
+          >
+            {" "}
+            No
+          </button>
+        </Modal>
       </div>
     );
   }
