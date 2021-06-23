@@ -3,12 +3,43 @@
 exports[`Should render Not Found Page correctly 1`] = `
 <div>
    
-  404 
-  <Link
-    replace={false}
-    to="/"
+  <Header />
+  <div
+    className="box-layout_notfound"
   >
-    Go Home
-  </Link>
+    <div
+      className="face"
+    >
+      <div
+        className="band"
+      >
+        <div
+          className="green"
+        />
+        <div
+          className="white"
+        />
+        <div
+          className="red"
+        />
+      </div>
+      <div
+        className="eyes"
+      />
+      <div
+        className="dimples"
+      />
+      <div
+        className="mouth"
+      />
+    </div>
+    <Link
+      className="not_found_title"
+      replace={false}
+      to="/dashboard"
+    >
+      ERROR 404 - The Developer probably fell asleep
+    </Link>
+  </div>
 </div>
 `;

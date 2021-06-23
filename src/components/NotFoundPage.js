@@ -1,10 +1,6 @@
 import React from "react";
 import { Link, Redirect } from "react-router-dom";
 import Header from "./Header";
-window.onload = function () {
-  document.querySelector(".cont_principal").className =
-    "cont_principal cont_error_active";
-};
 
 const NotFoundPage = () => (
   <div>

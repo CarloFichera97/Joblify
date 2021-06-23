@@ -2,14 +2,16 @@
 
 exports[`Should render Job Application List correctly with inputs 1`] = `
 <div
-  className="content-container"
+  className="content-container__dashboard"
 >
   <p
     className="numeral_locale"
   >
     en-gb
   </p>
-  <h2>
+  <h2
+    className="total__filter__selected"
+  >
     There are a total of 
     4
      Job Applications listed for the filters selected
@@ -157,14 +159,16 @@ exports[`Should render Job Application List correctly with inputs 1`] = `
 
 exports[`Should render Job Application List correctly with no inputs 1`] = `
 <div
-  className="content-container"
+  className="content-container__dashboard"
 >
   <p
     className="numeral_locale"
   >
     en-gb
   </p>
-  <h2>
+  <h2
+    className="total__filter__selected"
+  >
     There are a total of 
     0
      Job Applications listed for the filters selected

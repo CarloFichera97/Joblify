@@ -60,9 +60,19 @@ test("Should NOT change Salary Input", () => {
   expect(wrapper).toMatchSnapshot();
 });
 
-test("Should change salary Input", () => {
+test("Should not change salary Input", () => {
   const wrapper = shallow(<JobForm />);
   const value = "21321321";
+  wrapper.find("input").at(2).simulate("change", {
+    target: { value },
+  });
+  expect(wrapper.state("salary")).toBe("");
+  expect(wrapper).toMatchSnapshot();
+});
+
+test("Should change salary Input", () => {
+  const wrapper = shallow(<JobForm />);
+  const value = "1321";
   wrapper.find("input").at(2).simulate("change", {
     target: { value },
   });

@@ -42,6 +42,7 @@ exports[`Should NOT change Recruiter Phone Number Input 1`] = `
     <b>
       <div
         className="select_container"
+        id="singlepicker__container"
       >
         <withStyles(SingleDatePicker)
           anchorDirection="left"
@@ -234,6 +235,7 @@ exports[`Should NOT change Recruiter Phone Number Input 2`] = `
     <b>
       <div
         className="select_container"
+        id="singlepicker__container"
       >
         <withStyles(SingleDatePicker)
           anchorDirection="left"
@@ -426,6 +428,7 @@ exports[`Should NOT change Salary Input 1`] = `
     <b>
       <div
         className="select_container"
+        id="singlepicker__container"
       >
         <withStyles(SingleDatePicker)
           anchorDirection="left"
@@ -618,6 +621,7 @@ exports[`Should Not change Role Input 1`] = `
     <b>
       <div
         className="select_container"
+        id="singlepicker__container"
       >
         <withStyles(SingleDatePicker)
           anchorDirection="left"
@@ -810,6 +814,7 @@ exports[`Should change Company Name Input 1`] = `
     <b>
       <div
         className="select_container"
+        id="singlepicker__container"
       >
         <withStyles(SingleDatePicker)
           anchorDirection="left"
@@ -1002,6 +1007,7 @@ exports[`Should change Company Name Input 2`] = `
     <b>
       <div
         className="select_container"
+        id="singlepicker__container"
       >
         <withStyles(SingleDatePicker)
           anchorDirection="left"
@@ -1194,6 +1200,7 @@ exports[`Should change Description Input 1`] = `
     <b>
       <div
         className="select_container"
+        id="singlepicker__container"
       >
         <withStyles(SingleDatePicker)
           anchorDirection="left"
@@ -1386,6 +1393,7 @@ exports[`Should change Recruiter Email Input 1`] = `
     <b>
       <div
         className="select_container"
+        id="singlepicker__container"
       >
         <withStyles(SingleDatePicker)
           anchorDirection="left"
@@ -1578,6 +1586,7 @@ exports[`Should change Recruiter Name Input 1`] = `
     <b>
       <div
         className="select_container"
+        id="singlepicker__container"
       >
         <withStyles(SingleDatePicker)
           anchorDirection="left"
@@ -1770,6 +1779,7 @@ exports[`Should change Role Input 1`] = `
     <b>
       <div
         className="select_container"
+        id="singlepicker__container"
       >
         <withStyles(SingleDatePicker)
           anchorDirection="left"
@@ -1962,6 +1972,7 @@ exports[`Should change Role Input 2`] = `
     <b>
       <div
         className="select_container"
+        id="singlepicker__container"
       >
         <withStyles(SingleDatePicker)
           anchorDirection="left"
@@ -2154,6 +2165,7 @@ exports[`Should change Status Input 1`] = `
     <b>
       <div
         className="select_container"
+        id="singlepicker__container"
       >
         <withStyles(SingleDatePicker)
           anchorDirection="left"
@@ -2346,6 +2358,7 @@ exports[`Should change Status Input 2`] = `
     <b>
       <div
         className="select_container"
+        id="singlepicker__container"
       >
         <withStyles(SingleDatePicker)
           anchorDirection="left"
@@ -2501,158 +2514,190 @@ exports[`Should change salary Input 1`] = `
   <form
     onSubmit={[Function]}
   >
+    <h1
+      className="title title-companydetails"
+    >
+      Job Details
+    </h1>
     <input
       autoFocus={true}
+      className="input--jobform"
       onChange={[Function]}
-      placeholder="Company Name"
+      placeholder="Company Name *"
       type="text"
       value=""
     />
     <input
+      className="input--jobform"
       onChange={[Function]}
-      placeholder="Role"
+      placeholder="Role  *"
       type="text"
       value=""
     />
     <input
+      className="input--jobform"
       onChange={[Function]}
-      placeholder="Salary"
+      placeholder="Salary  *"
       type="text"
-      value="21321321"
+      value="1321"
     />
     <input
+      className="input--jobform"
       onChange={[Function]}
-      placeholder="Description"
+      placeholder="Description  *"
       type="text"
       value=""
     />
+    <b>
+      <div
+        className="select_container"
+        id="singlepicker__container"
+      >
+        <withStyles(SingleDatePicker)
+          anchorDirection="left"
+          appendToBody={false}
+          block={false}
+          calendarInfoPosition="bottom"
+          customCloseIcon={null}
+          customInputIcon={null}
+          date={"1970-01-01T00:00:00.000Z"}
+          dayPickerNavigationInlineStyles={null}
+          daySize={39}
+          disableScroll={false}
+          disabled={false}
+          displayFormat={[Function]}
+          enableOutsideDays={false}
+          firstDayOfWeek={null}
+          focused={false}
+          hideKeyboardShortcutsPanel={false}
+          horizontalMargin={0}
+          horizontalMonthPadding={13}
+          id="date"
+          initialVisibleMonth={null}
+          inputIconPosition="before"
+          isDayBlocked={[Function]}
+          isDayHighlighted={[Function]}
+          isOutsideRange={[Function]}
+          isRTL={false}
+          keepFocusOnInput={false}
+          keepOpenOnDateSelect={false}
+          monthFormat="MMMM YYYY"
+          navNext={null}
+          navPosition="navPositionTop"
+          navPrev={null}
+          noBorder={true}
+          numberOfMonths={1}
+          onClose={[Function]}
+          onDateChange={[Function]}
+          onFocusChange={[Function]}
+          onNextMonthClick={[Function]}
+          onPrevMonthClick={[Function]}
+          openDirection="down"
+          orientation="horizontal"
+          phrases={
+            Object {
+              "calendarLabel": "Calendar",
+              "chooseAvailableDate": [Function],
+              "clearDate": "Clear Date",
+              "closeDatePicker": "Close",
+              "dateIsSelected": [Function],
+              "dateIsUnavailable": [Function],
+              "enterKey": "Enter key",
+              "escape": "Escape key",
+              "hideKeyboardShortcutsPanel": "Close the shortcuts panel.",
+              "homeEnd": "Home and end keys",
+              "jumpToNextMonth": "Move forward to switch to the next month.",
+              "jumpToPrevMonth": "Move backward to switch to the previous month.",
+              "keyboardBackwardNavigationInstructions": "Navigate backward to interact with the calendar and select a date. Press the question mark key to get the keyboard shortcuts for changing dates.",
+              "keyboardForwardNavigationInstructions": "Navigate forward to interact with the calendar and select a date. Press the question mark key to get the keyboard shortcuts for changing dates.",
+              "keyboardShortcuts": "Keyboard Shortcuts",
+              "leftArrowRightArrow": "Right and left arrow keys",
+              "moveFocusByOneDay": "Move backward (left) and forward (right) by one day.",
+              "moveFocusByOneMonth": "Switch months.",
+              "moveFocusByOneWeek": "Move backward (up) and forward (down) by one week.",
+              "moveFocustoStartAndEndOfWeek": "Go to the first or last day of a week.",
+              "openThisPanel": "Open this panel.",
+              "pageUpPageDown": "page up and page down keys",
+              "questionMark": "Question mark",
+              "returnFocusToInput": "Return to the date input field.",
+              "roleDescription": "datepicker",
+              "selectFocusedDate": "Select the date in focus.",
+              "showKeyboardShortcutsPanel": "Open the keyboard shortcuts panel.",
+              "upArrowDownArrow": "up and down arrow keys",
+            }
+          }
+          placeholder="Date"
+          readOnly={false}
+          regular={false}
+          renderCalendarInfo={null}
+          renderDayContents={null}
+          renderMonthElement={null}
+          renderMonthText={null}
+          renderNavNextButton={null}
+          renderNavPrevButton={null}
+          renderWeekHeaderElement={null}
+          reopenPickerOnClearDate={false}
+          required={false}
+          screenReaderInputMessage=""
+          showClearDate={false}
+          showDefaultInputIcon={false}
+          small={false}
+          verticalHeight={null}
+          verticalSpacing={22}
+          weekDayFormat="dd"
+          withFullScreenPortal={false}
+          withPortal={false}
+        />
+      </div>
+    </b>
     <input
+      className="input--jobform"
       onChange={[Function]}
       placeholder="Status"
       type="text"
       value=""
     />
+    <textarea
+      className="textarea"
+      onChange={[Function]}
+      placeholder="Add a note for your job application"
+      rows="5"
+      value=""
+    />
+    <h1
+      className="title title-recruiterdetails"
+    >
+      Recruiter Details
+    </h1>
     <input
+      className="input--jobform"
       onChange={[Function]}
       placeholder="Recruiter Name"
       type="text"
       value=""
     />
     <input
+      className="input--jobform"
       onChange={[Function]}
       placeholder="Recruiter Email"
       type="email"
       value=""
     />
     <input
+      className="input--jobform"
       onChange={[Function]}
       placeholder="Recruiter Number"
       type="text"
       value=""
     />
-    <withStyles(SingleDatePicker)
-      anchorDirection="left"
-      appendToBody={false}
-      block={false}
-      calendarInfoPosition="bottom"
-      customCloseIcon={null}
-      customInputIcon={null}
-      date={"1970-01-01T00:00:00.000Z"}
-      dayPickerNavigationInlineStyles={null}
-      daySize={39}
-      disableScroll={false}
-      disabled={false}
-      displayFormat={[Function]}
-      enableOutsideDays={false}
-      firstDayOfWeek={null}
-      focused={false}
-      hideKeyboardShortcutsPanel={false}
-      horizontalMargin={0}
-      horizontalMonthPadding={13}
-      id="date"
-      initialVisibleMonth={null}
-      inputIconPosition="before"
-      isDayBlocked={[Function]}
-      isDayHighlighted={[Function]}
-      isOutsideRange={[Function]}
-      isRTL={false}
-      keepFocusOnInput={false}
-      keepOpenOnDateSelect={false}
-      monthFormat="MMMM YYYY"
-      navNext={null}
-      navPosition="navPositionTop"
-      navPrev={null}
-      noBorder={false}
-      numberOfMonths={1}
-      onClose={[Function]}
-      onDateChange={[Function]}
-      onFocusChange={[Function]}
-      onNextMonthClick={[Function]}
-      onPrevMonthClick={[Function]}
-      openDirection="down"
-      orientation="horizontal"
-      phrases={
-        Object {
-          "calendarLabel": "Calendar",
-          "chooseAvailableDate": [Function],
-          "clearDate": "Clear Date",
-          "closeDatePicker": "Close",
-          "dateIsSelected": [Function],
-          "dateIsUnavailable": [Function],
-          "enterKey": "Enter key",
-          "escape": "Escape key",
-          "hideKeyboardShortcutsPanel": "Close the shortcuts panel.",
-          "homeEnd": "Home and end keys",
-          "jumpToNextMonth": "Move forward to switch to the next month.",
-          "jumpToPrevMonth": "Move backward to switch to the previous month.",
-          "keyboardBackwardNavigationInstructions": "Navigate backward to interact with the calendar and select a date. Press the question mark key to get the keyboard shortcuts for changing dates.",
-          "keyboardForwardNavigationInstructions": "Navigate forward to interact with the calendar and select a date. Press the question mark key to get the keyboard shortcuts for changing dates.",
-          "keyboardShortcuts": "Keyboard Shortcuts",
-          "leftArrowRightArrow": "Right and left arrow keys",
-          "moveFocusByOneDay": "Move backward (left) and forward (right) by one day.",
-          "moveFocusByOneMonth": "Switch months.",
-          "moveFocusByOneWeek": "Move backward (up) and forward (down) by one week.",
-          "moveFocustoStartAndEndOfWeek": "Go to the first or last day of a week.",
-          "openThisPanel": "Open this panel.",
-          "pageUpPageDown": "page up and page down keys",
-          "questionMark": "Question mark",
-          "returnFocusToInput": "Return to the date input field.",
-          "roleDescription": "datepicker",
-          "selectFocusedDate": "Select the date in focus.",
-          "showKeyboardShortcutsPanel": "Open the keyboard shortcuts panel.",
-          "upArrowDownArrow": "up and down arrow keys",
-        }
-      }
-      placeholder="Date"
-      readOnly={false}
-      regular={false}
-      renderCalendarInfo={null}
-      renderDayContents={null}
-      renderMonthElement={null}
-      renderMonthText={null}
-      renderNavNextButton={null}
-      renderNavPrevButton={null}
-      renderWeekHeaderElement={null}
-      reopenPickerOnClearDate={false}
-      required={false}
-      screenReaderInputMessage=""
-      showClearDate={false}
-      showDefaultInputIcon={false}
-      small={false}
-      verticalHeight={null}
-      verticalSpacing={22}
-      weekDayFormat="dd"
-      withFullScreenPortal={false}
-      withPortal={false}
-    />
-    <textarea
-      onChange={[Function]}
-      placeholder="Add a note for your job application"
-      value=""
-    />
-    <button>
-      Add Job Application
-    </button>
+    <div>
+      <button
+        className="button__jobForm"
+        onClick={true}
+      >
+        Add Job Application
+      </button>
+    </div>
   </form>
 </div>
 `;
@@ -2699,6 +2744,7 @@ exports[`Should change textarea Input 1`] = `
     <b>
       <div
         className="select_container"
+        id="singlepicker__container"
       >
         <withStyles(SingleDatePicker)
           anchorDirection="left"
@@ -2891,6 +2937,7 @@ exports[`Should change textarea Input 2`] = `
     <b>
       <div
         className="select_container"
+        id="singlepicker__container"
       >
         <withStyles(SingleDatePicker)
           anchorDirection="left"
@@ -3083,6 +3130,7 @@ exports[`Should change the calendarFocused state 1`] = `
     <b>
       <div
         className="select_container"
+        id="singlepicker__container"
       >
         <withStyles(SingleDatePicker)
           anchorDirection="left"
@@ -3275,6 +3323,200 @@ exports[`Should change the date state 1`] = `
     <b>
       <div
         className="select_container"
+        id="singlepicker__container"
+      >
+        <withStyles(SingleDatePicker)
+          anchorDirection="left"
+          appendToBody={false}
+          block={false}
+          calendarInfoPosition="bottom"
+          customCloseIcon={null}
+          customInputIcon={null}
+          date={"1970-01-01T00:00:00.000Z"}
+          dayPickerNavigationInlineStyles={null}
+          daySize={39}
+          disableScroll={false}
+          disabled={false}
+          displayFormat={[Function]}
+          enableOutsideDays={false}
+          firstDayOfWeek={null}
+          focused={false}
+          hideKeyboardShortcutsPanel={false}
+          horizontalMargin={0}
+          horizontalMonthPadding={13}
+          id="date"
+          initialVisibleMonth={null}
+          inputIconPosition="before"
+          isDayBlocked={[Function]}
+          isDayHighlighted={[Function]}
+          isOutsideRange={[Function]}
+          isRTL={false}
+          keepFocusOnInput={false}
+          keepOpenOnDateSelect={false}
+          monthFormat="MMMM YYYY"
+          navNext={null}
+          navPosition="navPositionTop"
+          navPrev={null}
+          noBorder={true}
+          numberOfMonths={1}
+          onClose={[Function]}
+          onDateChange={[Function]}
+          onFocusChange={[Function]}
+          onNextMonthClick={[Function]}
+          onPrevMonthClick={[Function]}
+          openDirection="down"
+          orientation="horizontal"
+          phrases={
+            Object {
+              "calendarLabel": "Calendar",
+              "chooseAvailableDate": [Function],
+              "clearDate": "Clear Date",
+              "closeDatePicker": "Close",
+              "dateIsSelected": [Function],
+              "dateIsUnavailable": [Function],
+              "enterKey": "Enter key",
+              "escape": "Escape key",
+              "hideKeyboardShortcutsPanel": "Close the shortcuts panel.",
+              "homeEnd": "Home and end keys",
+              "jumpToNextMonth": "Move forward to switch to the next month.",
+              "jumpToPrevMonth": "Move backward to switch to the previous month.",
+              "keyboardBackwardNavigationInstructions": "Navigate backward to interact with the calendar and select a date. Press the question mark key to get the keyboard shortcuts for changing dates.",
+              "keyboardForwardNavigationInstructions": "Navigate forward to interact with the calendar and select a date. Press the question mark key to get the keyboard shortcuts for changing dates.",
+              "keyboardShortcuts": "Keyboard Shortcuts",
+              "leftArrowRightArrow": "Right and left arrow keys",
+              "moveFocusByOneDay": "Move backward (left) and forward (right) by one day.",
+              "moveFocusByOneMonth": "Switch months.",
+              "moveFocusByOneWeek": "Move backward (up) and forward (down) by one week.",
+              "moveFocustoStartAndEndOfWeek": "Go to the first or last day of a week.",
+              "openThisPanel": "Open this panel.",
+              "pageUpPageDown": "page up and page down keys",
+              "questionMark": "Question mark",
+              "returnFocusToInput": "Return to the date input field.",
+              "roleDescription": "datepicker",
+              "selectFocusedDate": "Select the date in focus.",
+              "showKeyboardShortcutsPanel": "Open the keyboard shortcuts panel.",
+              "upArrowDownArrow": "up and down arrow keys",
+            }
+          }
+          placeholder="Date"
+          readOnly={false}
+          regular={false}
+          renderCalendarInfo={null}
+          renderDayContents={null}
+          renderMonthElement={null}
+          renderMonthText={null}
+          renderNavNextButton={null}
+          renderNavPrevButton={null}
+          renderWeekHeaderElement={null}
+          reopenPickerOnClearDate={false}
+          required={false}
+          screenReaderInputMessage=""
+          showClearDate={false}
+          showDefaultInputIcon={false}
+          small={false}
+          verticalHeight={null}
+          verticalSpacing={22}
+          weekDayFormat="dd"
+          withFullScreenPortal={false}
+          withPortal={false}
+        />
+      </div>
+    </b>
+    <input
+      className="input--jobform"
+      onChange={[Function]}
+      placeholder="Status"
+      type="text"
+      value=""
+    />
+    <textarea
+      className="textarea"
+      onChange={[Function]}
+      placeholder="Add a note for your job application"
+      rows="5"
+      value=""
+    />
+    <h1
+      className="title title-recruiterdetails"
+    >
+      Recruiter Details
+    </h1>
+    <input
+      className="input--jobform"
+      onChange={[Function]}
+      placeholder="Recruiter Name"
+      type="text"
+      value=""
+    />
+    <input
+      className="input--jobform"
+      onChange={[Function]}
+      placeholder="Recruiter Email"
+      type="email"
+      value=""
+    />
+    <input
+      className="input--jobform"
+      onChange={[Function]}
+      placeholder="Recruiter Number"
+      type="text"
+      value=""
+    />
+    <div>
+      <button
+        className="button__jobForm"
+        onClick={true}
+      >
+        Add Job Application
+      </button>
+    </div>
+  </form>
+</div>
+`;
+
+exports[`Should not change salary Input 1`] = `
+<div>
+  <form
+    onSubmit={[Function]}
+  >
+    <h1
+      className="title title-companydetails"
+    >
+      Job Details
+    </h1>
+    <input
+      autoFocus={true}
+      className="input--jobform"
+      onChange={[Function]}
+      placeholder="Company Name *"
+      type="text"
+      value=""
+    />
+    <input
+      className="input--jobform"
+      onChange={[Function]}
+      placeholder="Role  *"
+      type="text"
+      value=""
+    />
+    <input
+      className="input--jobform"
+      onChange={[Function]}
+      placeholder="Salary  *"
+      type="text"
+      value=""
+    />
+    <input
+      className="input--jobform"
+      onChange={[Function]}
+      placeholder="Description  *"
+      type="text"
+      value=""
+    />
+    <b>
+      <div
+        className="select_container"
+        id="singlepicker__container"
       >
         <withStyles(SingleDatePicker)
           anchorDirection="left"

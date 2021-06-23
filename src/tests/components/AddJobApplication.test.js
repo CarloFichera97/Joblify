@@ -24,7 +24,7 @@ test("Should render AddJobApplication Correctly", () => {
 
 test("Should handle onSubmit ", () => {
   wrapper.find("JobForm").prop("onSubmit")(testDataArray[0]);
-  expect(history.push).toHaveBeenLastCalledWith("/");
+  expect(history.push).toHaveBeenLastCalledWith("/dashboard");
   expect(startAddJobApplication).toHaveBeenLastCalledWith(testDataArray[0]);
   expect(wrapper).toMatchSnapshot();
 });

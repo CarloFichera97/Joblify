@@ -37,15 +37,6 @@ test("Should set the role name", () => {
   ).toEqual({ ...filtersTestData1, role: "TEST" });
 });
 
-test("Should set the role ", () => {
-  expect(
-    filtersReducer(filtersTestData1, {
-      type: "SET_ROLE",
-      role: "TEST",
-    })
-  ).toEqual({ ...filtersTestData1, role: "TEST" });
-});
-
 test("Should set SORT BY to Salary", () => {
   expect(
     filtersReducer(filtersTestData2, {

@@ -35,19 +35,3 @@ test("Should edit a job application", () => {
     updates: { ...testData },
   });
 });
-
-test("Should add Job Application to database and store", (done) => {
-  const store = createMockStore({});
-
-  store.dispatch(startAddJobApplication(testDataNoID)).then(() => {
-    const actions = store.getActions();
-    expect(actions[0]).toEqual({
-      type: "ADD_JOB_APPLICATION",
-      jobApplication: {
-        id: expect.any(String),
-        ...testDataNoID,
-      },
-    });
-    done();
-  });
-});

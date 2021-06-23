@@ -2,9 +2,13 @@
 
 exports[`Should handle onSubmit  1`] = `
 <div>
-  <JobForm
-    onSubmit={[Function]}
-  />
+  <div
+    className="content-container"
+  >
+    <JobForm
+      onSubmit={[Function]}
+    />
+  </div>
 </div>
 `;
 

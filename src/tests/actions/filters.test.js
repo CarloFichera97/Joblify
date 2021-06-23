@@ -70,21 +70,6 @@ test("Should set role to empty string", () => {
   });
 });
 
-test("Should set role ", () => {
-  const role = "TEST";
-  expect(setRole(role)).toEqual({
-    type: "SET_ROLE",
-    role,
-  });
-});
-
-test("Should set role to empty string", () => {
-  expect(setRole()).toEqual({
-    type: "SET_ROLE",
-    role: "",
-  });
-});
-
 test("Should SORT BY to Salary ", () => {
   expect(sortBySalary()).toEqual({
     type: "SORT_BY_SALARY",
