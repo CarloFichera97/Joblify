@@ -6,7 +6,7 @@ $blue: #5e7fdc;
 
 $break: 400px;
 .box-layout_notfound {
-  background: #797a9e;
+  background: $main-bg-color;
   padding: 200px;
   background-size: cover;
 }

@@ -9,24 +9,8 @@ import configureStore from "./store/configureStore";
 import "react-dates/initialize";
 import "./firebase/firebase";
 import { firebase } from "./firebase/firebase";
-
-import {
-  setStartDate,
-  setEndDate,
-  setCompanyName,
-  setRole,
-  sortBySalary,
-  sortByDate,
-  searchByCompany,
-  searchByRole,
-} from "./actions/filters";
-
-import {
-  startSetJobApplication,
-  editJobApplication,
-  removeJobApplication,
-} from "./actions/jobApplications";
-
+import LoadingPage from "./components/Loading";
+import { startSetJobApplication } from "./actions/jobApplications";
 import { login, logout } from "./actions/auth";
 
 const store = configureStore();
@@ -65,4 +49,4 @@ firebase.auth().onAuthStateChanged((user) => {
   }
 });
 
-ReactDOM.render(<p>Loading....</p>, document.getElementById("app"));
+ReactDOM.render(<LoadingPage />, document.getElementById("app"));

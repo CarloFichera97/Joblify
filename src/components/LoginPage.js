@@ -68,13 +68,13 @@ class LoginPage extends React.Component {
   }
 }
 const startGoogleLogin = () => {
-  firebase.auth().signInWithRedirect(googleAuthProvider);
+  firebase.auth().signInWithPopup(googleAuthProvider);
 };
 const startFacebookLogin = () => {
   firebase.auth().signInWithPopup(facebookAuthProvider);
 };
 const startGithubLogin = () => {
-  firebase.auth().signInWithRedirect(gitHubAuthProvider);
+  firebase.auth().signInWithPopup(gitHubAuthProvider);
 };
 
 export const startLogout = () => {
