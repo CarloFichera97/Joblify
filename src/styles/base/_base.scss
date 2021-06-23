@@ -9,7 +9,7 @@ html {
 body {
   font: $base-font-family, $base-font-family-fallback;
   font-size: $m-size;
-  background-color: white;
+  background-color: $main-bg-color;
 }
 
 button {

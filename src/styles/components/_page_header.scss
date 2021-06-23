@@ -2,13 +2,13 @@
   background: #f7f7f7;
   margin-bottom: 0;
   padding: $m-size 0;
-  border-bottom: 1px solid darken(#f7f7f7, 10%);
+  border-bottom: 1px solid darken($main-bg-color, 15%);
 }
 
 .error-header {
   margin-bottom: 0;
   padding: $m-size 0;
-  border-bottom: 1px solid darken(#f7f7f7, 10%);
+  border-bottom: 1px solid darken($main-bg-color, 30%);
 }
 
 .page-header__actions {

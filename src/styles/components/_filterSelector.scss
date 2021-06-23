@@ -3,7 +3,8 @@
   flex-direction: column;
   margin-bottom: $m-size;
   margin-top: 20px;
-  @media (min-width: 1180px) {
+
+  @media (min-width: 1200px) {
     flex-direction: row;
     margin-bottom: $l-size;
   }
@@ -11,14 +12,14 @@
 
 .input-group__item {
   margin-bottom: $s-size;
-  @media (min-width: 1180px) {
-    margin: 0 $s-size 0 0;
+  background-color: $main-bg-color;
+  @media (min-width: 1200px) {
   }
 }
 
 .dashboard_input {
   border: none;
-  background-color: #f7f7f7;
+  background-color: $main-bg-color;
   border-bottom: 1px solid #797a9e;
   margin-top: -3.5px;
   padding: 10px;
@@ -36,27 +37,25 @@
     color: #797a9e;
     font-weight: 400;
   }
+  @media only screen and (max-width: 1200px) {
+    width: 300px;
+    margin-bottom: 20px;
+  }
 }
 
 .content-container-filters {
   display: flex;
   justify-content: center;
-  margin: 20px auto;
-  margin-top: 30px;
-  background: #f7f7f7;
-
-  border-bottom: 1px solid darken(#f7f7f7, 20%);
-
-  margin-bottom: 20px;
+  background: $main-bg-color;
+  margin-bottom: 0px;
   margin-top: 0;
   padding: 0 $m-size;
   max-width: 100%;
+  margin-top: 30px;
 }
-//.DateRangePickerInput {
-//}
 
 .select_option {
-  margin-top: 0px;
+  margin-top: -25px;
   font-style: italic;
   margin-left: 10px;
   color: #797a9e;
@@ -64,6 +63,13 @@
   margin-bottom: -10px;
   font-size: 22px;
   margin-right: 30px;
+  @media only screen and (max-width: 1187px) {
+    width: 30%;
+    margin-top: -3px;
+  }
+  @media only screen and (max-width: 400px) {
+    margin-left: 28px;
+  }
 }
 
 .send_to_back {
@@ -71,60 +77,25 @@
   z-index: -1;
 }
 
-.DatePickerMulti {
-  border-bottom: 1px solid #797a9e;
-  color: #797a9e;
-  &::placeholder {
-    color: #797a9e;
-    font-size: 22px;
-    font-style: italic;
-  }
-}
-
-.DateInput_input {
-  position: relative;
-
-  fill: solid;
-  background: none;
-  background-color: #f7f7f7;
-  width: 85%;
-
-  border-bottom: 1px solid #797a9e;
-}
-
-.DateRangePickerInput {
-  background: #f7f7f7;
-}
-
-.DateInput_input__focused {
-  outline: 0;
-  background: #f7f7f7;
-  border: 0;
-  border-top: 0;
-  border-right: 0;
-  border-bottom: 2px solid #008489;
-  border-left: 0;
-}
-
-.DateRangePickerInput_arrow {
-  margin-left: 10px;
-  margin-right: 10px;
-  margin-top: 4px;
-}
-
-.DateRangePicker {
-  position: relative;
-  display: inline-block;
-  background-color: #f7f7f7;
-}
-
 #select_1 {
   border-bottom: 1px solid #797a9e;
   margin-bottom: 0.3px;
+  @media only screen and (max-width: 1187px) {
+    width: 83%;
+  }
+  @media only screen and (max-width: 450px) {
+    width: 83%;
+    margin-left: 28px;
+  }
 }
 
 #select_2 {
   border-bottom: 1px solid #797a9e;
   padding-bottom: 0px;
   width: 80%;
+
+  @media only screen and (max-width: 450px) {
+    width: 83%;
+    margin-left: 28px;
+  }
 }

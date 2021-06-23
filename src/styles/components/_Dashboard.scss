@@ -1,12 +1,17 @@
 .numeral_locale {
-  color: white;
+  color: $main-bg-color;
   margin: 0;
   margin-top: -20px;
+}
+.content-container__dashboard {
+  margin: 0 auto;
+  padding: 0 $m-size;
+  max-width: 80rem;
 }
 .list-header {
   max-width: 80rem;
   background: darken($off-white, 3%);
-  border: 1px solid darken($off-white, 15%);
+  border: 1px solid darken($off-white, 40%);
   color: darken($grey, 20%);
   display: flex;
   justify-content: space-between;
@@ -23,7 +28,7 @@
 }
 
 .list-item {
-  border: 1px solid darken($off-white, 7%);
+  border: 1px solid darken($off-white, 40%);
   border-top: none;
   color: darken(#797a9e, 10%);
   display: flex;
@@ -31,8 +36,9 @@
   padding: $s-size;
   text-decoration: none;
   transition: background 0.3s ease;
+  background-color: white;
   &:hover {
-    background: $off-white;
+    background: $main-bg-color;
   }
   @media (min-width: $desktop-breakpoint) {
     align-items: center;
@@ -58,7 +64,7 @@
   font-size: 30px;
   word-break: break-all;
   &::hover {
-    color: darken(#797a9e, 5%);
+    color: darken(#797a9e, 10%);
   }
 }
 
@@ -83,4 +89,12 @@
   font-size: 26px;
   font-style: italic;
   padding: 10px 0px;
+}
+
+.total__filter__selected {
+  color: darken(#797a9e, 10%);
+
+  font-weight: 300;
+  font-style: italic;
+  font-size: 28px;
 }

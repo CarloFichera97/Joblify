@@ -9,28 +9,30 @@
 }
 
 .box-layout__box {
-  background: fade-out(white, 0.6);
+  background: darken($base-bgcolor, 10%);
+  border: 1px solid #c6cee2;
   border-radius: 20px;
   text-align: center;
   width: 28.5rem;
   padding: $m-size $m-size $l-size $m-size;
-  box-shadow: 0 0 400px #000;
+  box-shadow: 2px 2px 5px #000;
 }
 
 .box-layout__title {
-  font-size: 30pt;
+  font-size: 50px;
   margin-left: 13px;
   margin-right: 0;
   font-weight: bold;
+  margin-top: 3px;
   font-style: italic;
   margin-bottom: 0px;
-  color: lighten($base-color, 50%);
+  color: lighten($base-color, 90%);
 }
 
 .box-layout__paragraph {
-  font-size: 12.5pt;
+  font-size: 18pt;
   font-style: italic;
-  color: darken($base-bgcolor, 30%);
+  color: darken($base-bgcolor, 60%);
 }
 
 .lbtn {

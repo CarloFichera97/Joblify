@@ -1,0 +1,59 @@
+//.DateRangePickerInput {
+//}
+
+.DatePickerMulti {
+  border-bottom: 1px solid #797a9e;
+  color: #797a9e;
+  &::placeholder {
+    color: #797a9e;
+    font-size: 22px;
+    font-style: italic;
+  }
+}
+
+.DateInput_input {
+  position: relative;
+
+  fill: solid;
+  background: none;
+  background-color: #f7f7f7;
+  width: 85%;
+
+  border-bottom: 1px solid #797a9e;
+}
+
+.DateRangePickerInput {
+  background: #f7f7f7;
+}
+
+.DateInput_input__focused {
+  outline: 0;
+
+  border: 0;
+  border-top: 0;
+  border-right: 0;
+  border-bottom: 2px solid #008489;
+  border-left: 0;
+}
+
+.DateRangePickerInput_arrow {
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 4px;
+}
+
+.DateRangePicker {
+  position: relative;
+  display: inline-block;
+  background-color: #f7f7f7;
+}
+
+#singlepicker__container {
+  background-color: white;
+}
+
+#multidatepicker_container {
+  @media only screen and (max-width: 400px) {
+    margin-left: 25px;
+  }
+}

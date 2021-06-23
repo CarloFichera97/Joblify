@@ -1,7 +1,3 @@
-.outer__container {
-  background-color: $main-bg-color;
-}
-
 .content-container {
   margin: 0 auto;
   padding: 0 $m-size;
@@ -77,6 +73,7 @@ b {
   font-weight: 300;
   color: #797a9e;
   letter-spacing: 0.11em;
+  border-radius: 5px;
 
   &::placeholder {
     color: #c3c3d8;
@@ -102,7 +99,8 @@ b {
   font-size: 22px;
   font-weight: 300;
   color: #797a9e;
-
+  padding-top: 9px;
+  padding-left: 9px;
   letter-spacing: 0.11em;
 
   &::placeholder {

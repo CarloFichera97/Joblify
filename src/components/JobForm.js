@@ -170,7 +170,7 @@ export default class JobForm extends React.Component {
           />
 
           <b>
-            <div className="select_container">
+            <div id="singlepicker__container"className="select_container">
               <SingleDatePicker
                 date={this.state.createdOn}
                 onDateChange={this.onDateChange}

@@ -158,7 +158,7 @@ class FilterSelector extends React.Component {
           </div>
 
           <div className="input-group__item">
-            <div className="select_container">
+            <div id="multidatepicker_container" className="select_container">
               <DateRangePicker
                 startDate={this.props.filters.startDate}
                 endDate={this.props.filters.endDate}

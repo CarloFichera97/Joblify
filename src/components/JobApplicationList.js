@@ -7,10 +7,10 @@ import "numeral/locales/en-gb";
 
 export const JobApplicationList = (props) => {
   return (
-    <div className="content-container">
+    <div className="content-container__dashboard">
       <p className="numeral_locale">{numeral.locale("en-gb")}</p>
 
-      <h2>
+      <h2 className="total__filter__selected">
         There are a total of {props.jobApplications.length} Job Applications
         listed for the filters selected
       </h2>
