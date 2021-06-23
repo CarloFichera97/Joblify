@@ -4,4 +4,6 @@ public/index.bundle.js
 public/index.bundle.js.map
 public/styles.css
 public/styles.css.map
+.env.test
+.env.development
 

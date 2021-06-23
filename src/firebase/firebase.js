@@ -2,13 +2,12 @@
 import firebase from "firebase";
 
 const config = {
-  apiKey: "AIzaSyDMkWQ_DbbovtrPxidIyDQD0UafwabXJfo",
-  authDomain: "job-tracker-app-1599c.firebaseapp.com",
-  databaseURL: "https://job-tracker-app-1599c-default-rtdb.firebaseio.com",
-  projectId: "job-tracker-app-1599c",
-  storageBucket: "job-tracker-app-1599c.appspot.com",
-  messagingSenderId: "986870325892",
-  appId: "1:986870325892:web:c33900cf4e3565631518d1",
+  apiKey: process.env.FIREBASE_API_KEY,
+  authDomain: process.env.FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.FIREBASE_PROJECT_ID,
+  storageBucket: process.env.FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.FIREBASE_APP_ID,
 };
 
 firebase.initializeApp(config);

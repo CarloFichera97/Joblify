@@ -1,127 +1,191 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Should render Job Application List correctly with inputs 1`] = `
-<div>
-  en-gb
+<div
+  className="content-container"
+>
+  <p
+    className="numeral_locale"
+  >
+    en-gb
+  </p>
   <h2>
     There are a total of 
     4
      Job Applications listed for the filters selected
   </h2>
   <div
-    key="1"
+    className="list-body"
   >
-    <Link
-      replace={false}
-      to="/view/1"
+    <div
+      className="list-header"
     >
-      <h3>
-        Company: 
-        COMPANY ONE
-      </h3>
-    </Link>
-    <p>
-       Role: 
-      JOB ONE
-       
-    </p>
-    <p>
-      Salary: 
-      £10.00
-       
-    </p>
-    <p>
-      January 1st, 1970
-    </p>
-  </div>
-  <div
-    key="2"
-  >
-    <Link
-      replace={false}
-      to="/view/2"
+      <div
+        className="upper_message_company"
+      >
+        Company & Role
+      </div>
+      <div
+        className="upper_message_salary"
+      >
+        Salary
+      </div>
+    </div>
+    <div
+      key="1"
     >
-      <h3>
-        Company: 
-        COMPANY TWO
-      </h3>
-    </Link>
-    <p>
-       Role: 
-      JOB TWO
-       
-    </p>
-    <p>
-      Salary: 
-      £20.00
-       
-    </p>
-    <p>
-      December 28th, 1969
-    </p>
-  </div>
-  <div
-    key="3"
-  >
-    <Link
-      replace={false}
-      to="/view/3"
+      <Link
+        className="list-item"
+        replace={false}
+        to="/view/1"
+      >
+        <div>
+          <p
+            className="list-item__title"
+          >
+            COMPANY ONE
+          </p>
+          <span
+            className="list-item__sub-title"
+          >
+             
+            JOB ONE
+             
+          </span>
+        </div>
+        <span
+          className="list-item__data"
+        >
+          £10.00
+           
+        </span>
+      </Link>
+    </div>
+    <div
+      key="2"
     >
-      <h3>
-        Company: 
-        COMPANY THREE
-      </h3>
-    </Link>
-    <p>
-       Role: 
-      JOB THREE
-       
-    </p>
-    <p>
-      Salary: 
-      £05.00
-       
-    </p>
-    <p>
-      January 5th, 1970
-    </p>
-  </div>
-  <div
-    key="4"
-  >
-    <Link
-      replace={false}
-      to="/view/4"
+      <Link
+        className="list-item"
+        replace={false}
+        to="/view/2"
+      >
+        <div>
+          <p
+            className="list-item__title"
+          >
+            COMPANY TWO
+          </p>
+          <span
+            className="list-item__sub-title"
+          >
+             
+            JOB TWO
+             
+          </span>
+        </div>
+        <span
+          className="list-item__data"
+        >
+          £20.00
+           
+        </span>
+      </Link>
+    </div>
+    <div
+      key="3"
     >
-      <h3>
-        Company: 
-        COMPANY FOUR
-      </h3>
-    </Link>
-    <p>
-       Role: 
-      JOB FOUR
-       
-    </p>
-    <p>
-      Salary: 
-      £02.00
-       
-    </p>
-    <p>
-      December 25th, 1969
-    </p>
+      <Link
+        className="list-item"
+        replace={false}
+        to="/view/3"
+      >
+        <div>
+          <p
+            className="list-item__title"
+          >
+            COMPANY THREE
+          </p>
+          <span
+            className="list-item__sub-title"
+          >
+             
+            JOB THREE
+             
+          </span>
+        </div>
+        <span
+          className="list-item__data"
+        >
+          £05.00
+           
+        </span>
+      </Link>
+    </div>
+    <div
+      key="4"
+    >
+      <Link
+        className="list-item"
+        replace={false}
+        to="/view/4"
+      >
+        <div>
+          <p
+            className="list-item__title"
+          >
+            COMPANY FOUR
+          </p>
+          <span
+            className="list-item__sub-title"
+          >
+             
+            JOB FOUR
+             
+          </span>
+        </div>
+        <span
+          className="list-item__data"
+        >
+          £02.00
+           
+        </span>
+      </Link>
+    </div>
   </div>
 </div>
 `;
 
 exports[`Should render Job Application List correctly with no inputs 1`] = `
-<div>
-  en-gb
+<div
+  className="content-container"
+>
+  <p
+    className="numeral_locale"
+  >
+    en-gb
+  </p>
   <h2>
     There are a total of 
     0
      Job Applications listed for the filters selected
   </h2>
+  <div
+    className="list-body"
+  >
+    <div
+      className="list-header"
+    >
+      <div
+        className="upper_message_company"
+      >
+        Company & Role
+      </div>
+      <div
+        className="upper_message_salary"
+      >
+        Salary
+      </div>
+    </div>
+  </div>
 </div>
 `;

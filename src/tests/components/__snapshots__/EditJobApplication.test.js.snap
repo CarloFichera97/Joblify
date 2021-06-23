@@ -35,13 +35,25 @@ exports[`Should handle onSubmit  1`] = `
 
 exports[`Should render EditJobApplication Correctly 1`] = `
 <div>
-  <JobForm
-    onSubmit={[Function]}
-  />
-  <button
-    onClick={[Function]}
+  <div
+    className="page-header"
   >
-    Remove
-  </button>
+    <div
+      className="content-container"
+    >
+      <h1
+        className="page-header__title"
+      >
+        Edit Job Application
+      </h1>
+    </div>
+  </div>
+  <div
+    className="content-container"
+  >
+    <JobForm
+      onSubmit={[Function]}
+    />
+  </div>
 </div>
 `;

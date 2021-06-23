@@ -7,7 +7,7 @@
     "serve:dev": "webpack  --mode development",
     "serve:prod": "webpack  --mode production",
     "serve": "webpack serve --mode development",
-    "test": "jest --watchAll",
+    "test": "cross-env NODE_ENV=test jest --watchAll",
     "start": "node server/server.js",
     "heroku-postbuild": "npm run serve:prod"
   },
@@ -20,6 +20,7 @@
     "components": "^0.1.0",
     "cross-env": "^7.0.3",
     "dates": "^1.1.0",
+    "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "firebase": "^8.6.6",
     "from": "^0.1.7",
