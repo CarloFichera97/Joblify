@@ -114,16 +114,6 @@ const Header = () => {
           </li>
 
           <li>
-            <NavLink
-              to="/help"
-              className="nav_inactive_menu"
-              activeClassName="active"
-            >
-              Help
-            </NavLink>
-          </li>
-
-          <li>
             <a className="logout_button" onClick={startLogout}>
               Logout
             </a>
@@ -181,18 +171,6 @@ const Header = () => {
               Create
             </NavLink>
           </li>
-
-          <li>
-            <NavLink
-              onClick={() => {
-                toggleNav(!toggle);
-              }}
-              to="/help"
-            >
-              Help
-            </NavLink>
-          </li>
-
           <li>
             <a className="logout_button" onClick={startLogout}>
               Logout

@@ -32,7 +32,6 @@ const AppRouter = () => (
         />
         <PrivateRoute path="/edit/:id" component={EditJobApplication} />
         <PrivateRoute path="/view/:id" component={ViewJobApplication} />
-        <PrivateRoute path="/help" exact={true} component={HelpPage} />
         <Route component={NotFoundPage} />
       </Switch>
     </div>
