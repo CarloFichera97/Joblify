@@ -88,7 +88,7 @@ Necessary to have installed
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/CarloFichera97/job-application-tracker.git
+   git clone https://github.com/CarloFichera97/Joblify.git
    ```
 2. Install NPM packages
    ```sh
