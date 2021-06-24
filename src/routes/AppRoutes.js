@@ -2,7 +2,6 @@ import React from "react";
 import { Router, Route, Switch, Link, NavLink } from "react-router-dom";
 import { createBrowserHistory } from "history";
 import NotFoundPage from "./../components/NotFoundPage";
-import HelpPage from "./../components/HelpPage";
 import JobApplicationDashboard from "./../components/JobApplicationDashboard";
 import EditJobApplication from "./../components/EditJobApplication";
 import AddJobApplication from "./../components/AddJobApplication";
