@@ -6,7 +6,7 @@ import JobApplicationDashboard from "./../components/JobApplicationDashboard";
 import EditJobApplication from "./../components/EditJobApplication";
 import AddJobApplication from "./../components/AddJobApplication";
 import ViewJobApplication from "./../components/ViewJobApplication";
-import LoginPage from "../components/LoginPage.js";
+import LoginPage from "../components/LoginPage.js"; //
 //Route functionality belkow in the Switch is going to be handled by PrivateRoute.js file
 import PrivateRoute from "./PrivateRoute";
 import PublicRoute from "./PublicRoute";

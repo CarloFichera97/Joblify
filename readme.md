@@ -13,7 +13,7 @@
     <a href="https://github.com/CarloFichera97/job-application-tracker.git"><strong>Explore the github repository »</strong></a>
     <br />
     <br />
-    <a href="">View Demo</a>
+    <a href="https://joblify.herokuapp.com/dashboard">View Demo</a>
   </p>
 </p>
 

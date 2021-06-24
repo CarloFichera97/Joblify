@@ -11,7 +11,7 @@ import "./firebase/firebase";
 import { firebase } from "./firebase/firebase";
 import LoadingPage from "./components/Loading";
 import { startSetJobApplication } from "./actions/jobApplications";
-import { login, logout } from "./actions/auth";
+import { login, logout } from "./actions/auth"; //
 
 const store = configureStore();
 
