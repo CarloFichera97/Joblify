@@ -45,7 +45,7 @@ module.exports = (env) => {
       }),
     ],
     devServer: {
-      port: 3010,
+      port: process.env.PORT || 3010,
       watchContentBase: true,
 
       historyApiFallback: true,
