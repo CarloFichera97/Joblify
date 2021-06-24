@@ -99,7 +99,7 @@ Necessary to have installed
 
 ## Application Structure
 
-<img src="public/images/joblify_app_structure.png" alt="Joblify Structure" >
+<img src="https://raw.githubusercontent.com/CarloFichera97/job-application-tracker/main/public/images/Joblify_App_Structure.PNG" alt="Joblify Structure" >
 
 Download and open [Joblify App Structure](https://github.com/CarloFichera97/job-application-tracker/blob/main/public/structure/Joblify_App_Structure.html) for better readability.
 
@@ -117,7 +117,7 @@ Authentication with:
 - Facebook
 - GitHub
 
-<img src="public/structure/Wireframe_Login_Page.png" alt="Joblify Login Page" >
+<img src="https://raw.githubusercontent.com/CarloFichera97/job-application-tracker/main/public/structure/Wireframe_Login_Page.PNG" alt="Joblify Login Page" >
 
 ### Dashboard Page
 
@@ -133,7 +133,7 @@ Main Functionalities:
   - Salary
   - Date Created
 
-<img src="public/structure/Wireframe_Dashboard_Page.png" alt="Joblify Dashboard Page" >
+<img src="https://raw.githubusercontent.com/CarloFichera97/job-application-tracker/main/public/structure/Wireframe_Dashboard_Page.PNG" alt="Joblify Dashboard Page" >
 
 ## View Job Application Page
 
@@ -148,11 +148,11 @@ Main Functionalities:
 
 ### Create Application Page
 
-<img src="public/structure/Wireframe_Create_Page.png" alt="Joblify Create Page" >
+<img src="https://raw.githubusercontent.com/CarloFichera97/job-application-tracker/main/public/structure/Wireframe_Create_Page.PNG" alt="Joblify Create Page" >
 
 ### Edit Application Page
 
-<img src="public/structure/Wireframe_Edit_Page.png" alt="Joblify Edit Page" >
+<img src="https://raw.githubusercontent.com/CarloFichera97/job-application-tracker/main/public/structure/Wireframe_Edit_Page.PNG" alt="Joblify Edit Page" >
 
 <!-- CONTRIBUTING -->
 
