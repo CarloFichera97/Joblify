@@ -8,6 +8,7 @@
 .view-item__title {
   display: grid;
   justify-content: first baseline;
+  color:#797a9e;
 }
 
 .view-item__title {
@@ -20,19 +21,22 @@
 }
 .table_titles {
   font-size: 22px;
+
+
 }
 
 .table_values {
   font-size: 22px;
-  color: #444444;
+  color: #797a9e;
   font-style: italic;
   word-break: break-all;
 }
 
 .table_title {
   font-size: 36px;
+  
   margin-top: 20px;
-  color: #444444;
+  color: darken(#797a9e,20%);
   word-break: break-all;
   position: relative;
   z-index: 200;

@@ -41,8 +41,8 @@ export class ViewJobApplication extends React.Component {
       <div className="content-container__view">
         <Tabs>
           <TabList>
-            <Tab>Job Application Details</Tab>
-            <Tab>Recruiter Details</Tab>
+            <Tab>Job Application</Tab>
+            <Tab>Recruiter</Tab>
             <Tab>Notes</Tab>
           </TabList>
           <TabPanel>
@@ -50,7 +50,7 @@ export class ViewJobApplication extends React.Component {
               <DataTable
                 className="table_table"
                 title={
-                  <div className="table_title">Job Application Details</div>
+                  <div className="table_title">Job Application</div>
                 }
                 columns={[
                   {
@@ -123,7 +123,7 @@ export class ViewJobApplication extends React.Component {
             <Card>
               <DataTable
                 className="table_table"
-                title={<div className="table_title">Recruiter Details</div>}
+                title={<div className="table_title">Recruiter</div>}
                 columns={[
                   {
                     title: "title",
