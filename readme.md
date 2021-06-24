@@ -144,7 +144,7 @@ Main Functionalities:
 - View Full application details
 - Remove Job Application
 
-<img src="public/structure/Wireframe_View_Application_Page.png" alt="Joblify View Page" >
+<img src="https://raw.githubusercontent.com/CarloFichera97/job-application-tracker/main/public/structure/Wireframe_Create_Page.PNG" alt="Joblify View Page" >
 
 ### Create Application Page
 
