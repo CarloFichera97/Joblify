@@ -8,7 +8,7 @@ const port = process.env.PORT || 3010; //
 app.use(express.static(publicPath));
 
 app.use(
-  serveFavicon(path.join(__dirname, publicPath, "images", "favicon.ico"))
+  serveFavicon(path.join(__dirname, "./../", "public", "images", "favicon.png"))
 );
 app.get("*", (req, res) => {
   res.sendFile(path.join(publicPath, "index.html"));
