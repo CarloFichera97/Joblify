@@ -72,6 +72,11 @@
   }
 }
 
+.select_container {
+  position: relative;
+  z-index: 200;
+}
+
 .send_to_back {
   position: relative;
   z-index: -1;

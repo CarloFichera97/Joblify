@@ -61,6 +61,7 @@ const LineHorizontalButton = styled.span`
 
 const Overlay = styled.div`
   position: absolute;
+  z-index: 300;
   height: ${(props) => (props.open ? "91vh" : 0)};
   width: 100%;
   background: #1c2022;
@@ -121,25 +122,7 @@ const Header = () => {
         </HorizontalMenu>
         <ToggleIcon
           onClick={() => {
-            let element = document.querySelectorAll(".select_container");
             toggleNav(!toggle);
-            if (
-              document
-                .querySelector(".select_container")
-                .classList.contains("send_to_back")
-            ) {
-              setTimeout(() => {
-                element.forEach((element) => {
-                  element.classList.remove("send_to_back");
-                });
-              }, 350);
-            } else {
-              setTimeout(() => {
-                element.forEach((element) => {
-                  element.classList.add("send_to_back");
-                });
-              }, 100);
-            }
           }}
         >
           <LineHorizontalButton open={toggle} />
@@ -172,7 +155,7 @@ const Header = () => {
             </NavLink>
           </li>
           <li>
-            <a className="logout_button" onClick={startLogout}>
+            <a className="logout_button__" onClick={startLogout}>
               Logout
             </a>
           </li>
