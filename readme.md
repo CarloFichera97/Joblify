@@ -105,14 +105,14 @@ Necessary to setup
    ```
    ### Database Setup
 
-1. Create firebase database
+- Create firebase database
 
 ```sh
  https://firebasetutorials.com/create-firebase-realtime-database/
 ```
 
-2. Create .env.development file within the Joblify directory
-3. Copy-paste Firebase config in the KEY=VALUE format
+-  Create .env.development file within the Joblify directory
+-  Copy-paste Firebase config in the KEY=VALUE format
 
    ```sh
    FIREBASE_API_KEY=value
