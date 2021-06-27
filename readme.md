@@ -89,6 +89,10 @@ Necessary to have installed
 - Node.js
 - Npm package manager
 
+Necessary to setup
+
+- Firebase Database
+
 ### Installation
 
 1. Clone the repo
@@ -99,6 +103,28 @@ Necessary to have installed
    ```sh
    npm install
    ```
+   ### Database Setup
+
+1. Create firebase database
+
+```sh
+ https://firebasetutorials.com/create-firebase-realtime-database/
+```
+
+2. Create .env.development file within the Joblify directory
+3. Copy-paste Firebase config in the KEY=VALUE format
+
+   ```sh
+   FIREBASE_API_KEY=value
+   FIREBASE_AUTH_DOMAIN=value
+   FIREBASE_DATABASE_URL=value
+   FIREBASE_PROJECT_ID=value
+   FIREBASE_STORAGE_BUCKET=value
+   FIREBASE_MESSAGING_SENDER_ID=value
+   FIREBASE_APP_ID=1:value
+   ```
+
+   <!-- ROADMAP -->
 
 <!-- ROADMAP -->
 
