@@ -61,7 +61,6 @@ const LineHorizontalButton = styled.span`
 
 const Overlay = styled.div`
   position: absolute;
-  z-index: 300;
   height: ${(props) => (props.open ? "91vh" : 0)};
   width: 100%;
   background: #1c2022;
@@ -122,7 +121,17 @@ const Header = () => {
         </HorizontalMenu>
         <ToggleIcon
           onClick={() => {
+            let element = document.querySelector(".overlay");
             toggleNav(!toggle);
+            if (toggle === true) {
+              setTimeout(() => {
+                element.classList.remove("send_to_front");
+              }, 100);
+            } else {
+              setTimeout(() => {
+                element.classList.add("send_to_front");
+              }, 100);
+            }
           }}
         >
           <LineHorizontalButton open={toggle} />
@@ -130,7 +139,8 @@ const Header = () => {
           <LineHorizontalButton open={toggle} />
         </ToggleIcon>
       </NavigationBar>
-      <Overlay open={toggle}>
+
+      <Overlay className="overlay" open={toggle}>
         <OverlayMenu open={toggle}>
           <li>
             <NavLink
