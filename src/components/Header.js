@@ -121,23 +121,15 @@ const Header = () => {
         </HorizontalMenu>
         <ToggleIcon
           onClick={() => {
-            let element = document.querySelectorAll(".select_container");
+            let element = document.querySelector(".overlay");
             toggleNav(!toggle);
-            if (
-              document
-                .querySelector(".select_container")
-                .classList.contains("send_to_back")
-            ) {
+            if (toggle === true) {
               setTimeout(() => {
-                element.forEach((element) => {
-                  element.classList.remove("send_to_back");
-                });
-              }, 350);
+                element.classList.remove("send_to_front");
+              }, 100);
             } else {
               setTimeout(() => {
-                element.forEach((element) => {
-                  element.classList.add("send_to_back");
-                });
+                element.classList.add("send_to_front");
               }, 100);
             }
           }}
@@ -147,7 +139,8 @@ const Header = () => {
           <LineHorizontalButton open={toggle} />
         </ToggleIcon>
       </NavigationBar>
-      <Overlay open={toggle}>
+
+      <Overlay className="overlay" open={toggle}>
         <OverlayMenu open={toggle}>
           <li>
             <NavLink
@@ -172,7 +165,7 @@ const Header = () => {
             </NavLink>
           </li>
           <li>
-            <a className="logout_button" onClick={startLogout}>
+            <a className="logout_button__" onClick={startLogout}>
               Logout
             </a>
           </li>

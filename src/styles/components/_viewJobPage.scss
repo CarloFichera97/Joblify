@@ -8,7 +8,8 @@
 .view-item__title {
   display: grid;
   justify-content: first baseline;
-  color:#797a9e;
+  color: #797a9e;
+  word-break: break-all;
 }
 
 .view-item__title {
@@ -21,8 +22,9 @@
 }
 .table_titles {
   font-size: 22px;
-
-
+  @media screen and (max-width: 700px) {
+    font-size: 18px;
+  }
 }
 
 .table_values {
@@ -30,13 +32,15 @@
   color: #797a9e;
   font-style: italic;
   word-break: break-all;
+  @media screen and (max-width: 700px) {
+    font-size: 18px;
+  }
 }
 
 .table_title {
   font-size: 36px;
-  
   margin-top: 20px;
-  color: darken(#797a9e,20%);
+  color: darken(#797a9e, 20%);
   word-break: break-all;
   position: relative;
   z-index: 200;
@@ -47,6 +51,7 @@
   position: relative;
   z-index: 140;
   width: 10%;
+  word-break: break-all;
 }
 
 .button__view {
